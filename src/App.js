@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       {/* <div  className='text-xl bg-green-500' >hello tailwind text</div> */}
-      {/* <Notification /> */}
+      <Notification />
       <Cards />
     </div>
   );
