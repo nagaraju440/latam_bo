@@ -1,10 +1,10 @@
 // import './App.css';
-import Resume from './Components/Resume';
+import ModalButton from './Components/ModalButton';
 
 function App() {
   return (
     <div className="App">
-      <Resume/>
+      <ModalButton />
     </div>
   );
 }

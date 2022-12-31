@@ -1,0 +1,30 @@
+[
+    {
+      "title": "General Information",
+      "course": ["Course", "The Art of Breathing"],
+      "modality": ["Modality", "Online"],
+      "zoomLink": ["Zoom Link", "https://www.zoom.us/5d87f"],
+      "visibility": ["Visibility", "Private"]
+    },
+    {
+      "title": "Dates and Times",
+      "course": ["Hours(Weekdays)", "19:00 to 22:00"],
+      "modality": ["Hours(Weekends)", "9:00 to 12:00"],
+      "zoomLink": ["Zoom Link", "https://www.zoom.us/5d87f"],
+      "visibility": ["Visibility", "Private"]
+    },
+    {
+      "title": "General Information",
+      "course": ["Course", "The Art of Breathing"],
+      "modality": ["Modality", "Online"],
+      "zoomLink": ["Zoom Link", "https://www.zoom.us/5d87f"],
+      "visibility": ["Visibility", "Private"]
+    },
+    {
+      "title": "General Information",
+      "course": ["Course", "The Art of Breathing"],
+      "modality": ["Modality", "Online"],
+      "zoomLink": ["Zoom Link", "https://www.zoom.us/5d87f"],
+      "visibility": ["Visibility", "Private"]
+    }
+  ]
