@@ -1,0 +1,55 @@
+.HeaderLayout-maincontainer
+{
+    display: flex;
+    width: 100%;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px  #eeeeee;;
+}
+.HeaderLayout-innerContainer
+{
+    display: flex;
+    width: 93%;
+    /* background-color: pink; */
+    justify-content: space-between;
+}
+.HeaderLayout-InnerContainer-Leftpart
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.HeaderLayout-InnerContainer-Rightpart
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.HeaderLayout-HeaderTitle
+{
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-size: 28px;
+    color: #59595B;
+    padding-left:18px;
+}
+.HeaderLayout-Button
+{
+    display: flex;
+    background-color: #7677F4;
+    padding:11px 25px;
+    border-radius:8px;
+}
+.HeaderLayout-ButtonText
+{
+    padding-left:10px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+}
