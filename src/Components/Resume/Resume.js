@@ -4,7 +4,7 @@ import Content from "./Content";
 
 function Resume() {
   return (
-    <div className="flex flex-col justify-around">
+    <div className=" mb-4">
       <Content />
       <Button name="Send Request"/>
     </div>
