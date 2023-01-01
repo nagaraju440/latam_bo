@@ -16,7 +16,7 @@ function Cards() {
     ];
     return (
         <div>
-            <div className="flex flex-justify-between">
+            <div className="flex flex-wrap w-96 h-80">
                 {Data.map((item) => {
                     return (
                         <div>

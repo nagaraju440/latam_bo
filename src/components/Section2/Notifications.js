@@ -22,7 +22,10 @@ function Notification() {
                             <div className="flex justify-center text-[16px] text-[#59595B] font-normal leading-9">
                                 {item.text}
                             </div>
-                            <hr></hr>
+                            <div className="my-2">
+                        
+                            {Data.length == item.id ?console.log("Hello"):<hr></hr> }
+                            </div>
                         </div>
                     );
                 })}
