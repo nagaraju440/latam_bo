@@ -1,4 +1,5 @@
 import React from "react";
+import NewCourse from "./pages/instructor/courses/new";
 
 export default function Modal({ visible, onClose }) {
   if (!visible) return null;
@@ -16,6 +17,7 @@ export default function Modal({ visible, onClose }) {
             X
           </button>
         </div>
+        <NewCourse/>
       </div>
     </div>
   );

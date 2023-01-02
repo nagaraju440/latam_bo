@@ -4,6 +4,8 @@ import Cards from "./components/Section2/Cards";
 import Notification from "./components/Section2/Notifications";
 import Sidebar from "./components/Sidebar";
 import { Dashbaord } from "./pages/Dashbaord";
+import './App.css';
+import NewCourse from './pages/instructor/courses/new';
 import Modal from "./Modal";
   import { useState } from 'react';
 
@@ -18,6 +20,8 @@ function App() {
       <Cards /> */}
       <Dashbaord/>
 
+      {/* <NewCourse/> */}
+      {/* <div  className='text-xl bg-green-500' >hello tailwind text</div> */}
       {/* <div  className='text-xl bg-green-500 font-bold' >hello tailwind text</div> */}
       <div className="maindiv">
         <div className="headerbutton p-3">
