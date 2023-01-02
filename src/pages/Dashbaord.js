@@ -4,18 +4,18 @@ import Sidebar from "../components/Sidebar";
 
 export const Dashbaord = () => {
     return (
-        <div className=" ">
-            {/* <div>nav</div>
+      <div className=" ">
+        {/* <div>nav</div>
             <div>
                 <div>part 1</div>
                 <div>part 2</div>
                 <div>part 3</div>
             </div> */}
-          <Navbar/>
-          <Sidebar/>
-           <div>
-            
-           </div>
-        </div>
+        <Navbar />
+        {/* <div  className='fixed' > */}
+          {/* <Sidebar /> */}
+        {/* </div> */}
+        <div></div>
+      </div>
     );
 };
