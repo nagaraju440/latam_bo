@@ -10,7 +10,7 @@ function Section2() {
         //do some stuff here
       };
     return (
-        <div className="Section2-maincontanier">
+        <div className="flex bg-[#E5E5E5] justify-center items-center pt-40 pb-20">
             <div className="Section2-innercontainer">
                 <div className="Section2-innercontainer-Leftpart">
                     <div className="Section2-GroupButton">
