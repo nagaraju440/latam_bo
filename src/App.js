@@ -20,11 +20,8 @@ function App() {
           className="w-25 bg-slate-400 h-12 text-sm text-center p-3 float-right rounded">click here</button>
         </div>
       </div> 
-    <Modal onClose={handleOnClose} visible={showModal}>
-
-    </Modal>
-    {/* <Modal onClose={handleOnClose} visible={showModal}/>  */}
-    <StepIndicator />
+    <Modal onClose={handleOnClose} visible={showModal}/>
+    {/* <StepIndicator /> */}
     </div>
   );
 }

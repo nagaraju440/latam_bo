@@ -2,6 +2,9 @@ import React from "react";
 import Form from "./UiCore/FormComponent/FormFeild/FormFeild";
 import InputFormFeild from "./UiCore/FormComponent/InputFormFeild/InputFormFeild";
 import NewCoursePage1 from "./pages/instructor/courses/new/NewCoursePage1";
+import StepIndicator from './pages/instructor/courses/StepIndicator/StepIndicator';
+
+
 export default function Modal({ visible, onClose }) {
   if (!visible) return null;
   return (
@@ -18,8 +21,10 @@ export default function Modal({ visible, onClose }) {
             X
           </button>
         </div>
-      </div>
+        <StepIndicator/>
       <NewCoursePage1/>
+      </div>
+      
     </div>
   );
 }
