@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "./StepIndicator.css";
 // import { TiTick } from "react-icons/ti";
-const Stepper = () => {
+const Stepper = (props) => {
   const steps = ["step-1","step-2","step-3","step-4","step-5"];
   const [currentStep, setCurrentStep] = useState(1);
   const [complete, setComplete] = useState(false);
+  
   return (
     <>
+      <div>{props.stepsData[currentStep - 1].header}</div>
+      <div>{props.stepsData[currentStep - 1].descp}</div>
       <div className="Steps">
         {steps?.map((step, i) => (
           <div
@@ -16,12 +19,12 @@ const Stepper = () => {
             } `}
           >
             <div className="step">
-              {i + 1 < currentStep || complete ? <div>hii</div>: i + 1}
+              {i + 1 < currentStep || complete ? <div>hii</div> : i + 1}
             </div>
-            <p className="text-gray-500">{step}</p>
           </div>
         ))}
       </div>
+      <div>{props.stepsData[currentStep - 1].stepComponent}</div>
       {!complete && (
         <button
           className="btn"

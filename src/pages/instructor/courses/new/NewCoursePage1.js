@@ -19,17 +19,13 @@ const NewCoursePage1 = () => {
       <Form
         onSubmit={handleSubmit}
         schema={schema}
-        // defaultValues={{
-        //   isit: "is this course for another instructor",
-        // }}
       >
         <div className="flex flex-col space-y-4 m-10 w-[400px]">
           <InputFormFeild label="name" name="name" />
           <InputFormFeild label="mode" name="mode" />
           <InputFormFeild label="zoom link" name="zoomLink" />
           <InputFormFeild label="private / public" name="pr/pb" />
-          {/* <InputFormFeild label="" name="isit" /> */}
-          <UiButton text="NEXT" style={{width:400}} type="submit" />
+          <UiButton text="NEXT"  type="submit" />
         </div>
       </Form>
     </div>

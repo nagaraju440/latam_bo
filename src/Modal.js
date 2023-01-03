@@ -5,7 +5,7 @@ import NewCoursePage1 from "./pages/instructor/courses/new/NewCoursePage1";
 import StepIndicator from './pages/instructor/courses/StepIndicator/StepIndicator';
 
 
-export default function Modal({ visible, onClose }) {
+export default function Modal({ visible, onClose ,children }) {
   if (!visible) return null;
   return (
     <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center">
@@ -21,8 +21,10 @@ export default function Modal({ visible, onClose }) {
             X
           </button>
         </div>
-        <StepIndicator/>
-      <NewCoursePage1/>
+        {children}
+        {/* <div>ello modal</div> */}
+        {/* <StepIndicator/>
+      <NewCoursePage1/> */}
       </div>
       
     </div>
