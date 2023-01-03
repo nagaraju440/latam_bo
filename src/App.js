@@ -1,6 +1,7 @@
 import './App.css';
 import NewCourse from './pages/instructor/courses/new';
 import Modal from "./Modal";
+import StepIndicator from './pages/instructor/courses/StepIndicator/StepIndicator';
   import { useState } from 'react';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <div>
-      <NewCourse/>
+      {/* <NewCourse/> */}
       {/* <div  className='text-xl bg-green-500' >hello tailwind text</div> */}
       {/* <div  className='text-xl bg-green-500 font-bold' >hello tailwind text</div> */}
       {/* <div className="maindiv">
@@ -21,6 +22,7 @@ function App() {
       </div> 
     <Modal onClose={handleOnClose} visible={showModal}/> */}
     
+    <StepIndicator />
     </div>
   );
 }
