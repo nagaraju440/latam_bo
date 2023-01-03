@@ -1,5 +1,7 @@
 import React from "react";
-
+import Form from "./UiCore/FormComponent/FormFeild/FormFeild";
+import InputFormFeild from "./UiCore/FormComponent/InputFormFeild/InputFormFeild";
+import NewCoursePage1 from "./pages/instructor/courses/new/NewCoursePage1";
 export default function Modal({ visible, onClose }) {
   if (!visible) return null;
   return (
@@ -17,6 +19,7 @@ export default function Modal({ visible, onClose }) {
           </button>
         </div>
       </div>
+      <NewCoursePage1/>
     </div>
   );
 }
