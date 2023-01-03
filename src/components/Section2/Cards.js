@@ -1,9 +1,9 @@
 import React from "react";
-import v1 from "../assets/v1.svg";
-import v2 from "../assets/v2.svg";
-import v3 from "../assets/v3.svg";
-import v4 from "../assets/v4.svg";
-import v5 from "../assets/v5.svg";
+import v1 from "../assets/icons/v1.svg";
+import v2 from "../assets/icons/v2.svg";
+import v3 from "../assets/icons/v3.svg";
+import v4 from "../assets/icons/v4.svg";
+import v5 from "../assets/icons/v5.svg";
 
 function Cards() {
     const Data = [
@@ -15,24 +15,18 @@ function Cards() {
         { id: "6", src: v5, text: "Reporte nuevo" },
     ];
     return (
-        <div>
-            <div className="flex flex-wrap w-96 h-80">
-                {Data.map((item) => {
+            <div className="w-96 h-80  grid grid-cols-4 gap-4">
+               {Data.map((item) => {
                     return (
                         <div>
-                            <div className=" border box-content w-21 h-20 flex justify-center shadow-md items-center">
-                                <img
-                                    className="w-9 h-9"
-                                    src={item.src}
-                                    alt
-                                ></img>
+                            <div className=" border box-content h-20 w-20 flex justify-center shadow-md items-center rounded-[9px] bg-[#FFFFFF] ">
+                                <img src={item.src}alt='this is card svg'></img>
                             </div>
-                            <div className=" text-center">{item.text}</div>
+                            <div className=" text-center text-[16px] font-normal ">{item.text}</div>
                         </div>
                     );
                 })}
             </div>
-        </div>
     );
 }
 
