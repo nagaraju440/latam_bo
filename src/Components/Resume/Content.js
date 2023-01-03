@@ -4,12 +4,12 @@ import EditButton from "./EditButton";
 
 function Content() {
   return (
-    <div className="container mx-auto h-96 overflow-auto mb-4">
+    <div className="container mx-auto h-96 overflow-auto mb-4 mr-4 shadow-inner">
       {Data.map((d) => {
         return (
           <div className="my-2">
             <div className="flex justify-between">
-              <p className="font-semibold text-lg text-title">{d.title}</p>
+              <p className="font-semibold text-lg text-title  ">{d.title}</p>
               <EditButton />
             </div>
             <div className="grid grid-cols-2 font-normal text-sm mb-2 [&>*:nth-child(odd)]:text-property [&>*:nth-child(even)]:text-value">
