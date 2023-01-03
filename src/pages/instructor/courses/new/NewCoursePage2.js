@@ -9,7 +9,7 @@ const schema = yup.object().shape({
   "pr/pb": yup.string().required(),
   isit: yup.string().required(),
 });
-const NewCoursePage1 = () => {
+const NewCoursePage2 = () => {
   const handleSubmit = (data) => {
     console.log("data is", data);
   };
@@ -25,11 +25,11 @@ const NewCoursePage1 = () => {
           <InputFormFeild label="mode" name="mode" />
           <InputFormFeild label="zoom link" name="zoomLink" />
           <InputFormFeild label="private / public" name="pr/pb" />
-          <UiButton text="NEXT" type="submit" />
+          <UiButton text="NEXT"  type="submit" />
         </div>
       </Form>
     </div>
   );
 };
 
-export default NewCoursePage1;
+export default NewCoursePage2;
