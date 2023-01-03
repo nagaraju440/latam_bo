@@ -7,18 +7,14 @@
 }
 .customButton {
     display: flex;
-    /* letter-spacing: 0.5px; */
     background-color:white;
     color: #858585;
     font-size: 14px;
     border: rgb(255, 255, 255);
-    /* border-radius: 5px; */
     cursor: pointer;
-    padding: 12px 30px;
-   
+    padding: 9px 20px; 
     }
 
 .active{
     background-color: rgb(238, 238, 238);
-    /* border: 0px solid  rgb(238, 238, 238); */
     }
