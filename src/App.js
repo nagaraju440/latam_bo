@@ -3,7 +3,7 @@ import NewCourse from './pages/instructor/courses/new';
 import Modal from "./Modal";
 import StepIndicator from './pages/instructor/courses/StepIndicator/StepIndicator';
   import { useState } from 'react';
-import TimeDataRangePicker from './components/TimeDataRangPicker';
+import Select from "./select.js";
 
 function App() {
   const [showModal,setshowModal]=useState(false);
@@ -18,9 +18,9 @@ function App() {
           className="w-25 bg-slate-400 h-12 text-sm text-center p-3 float-right rounded">click here</button>
         </div>
       </div> 
-    <Modal onClose={handleOnClose} visible={showModal}><NewCourse/></Modal>
-     */}
-     <TimeDataRangePicker/>
+    <Modal onClose={handleOnClose} visible={showModal}><NewCourse/></Modal> */}
+    {/* <Select/> */}
+    <Select></Select>
     </div>
   );
 }
