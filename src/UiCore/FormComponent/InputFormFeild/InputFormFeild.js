@@ -1,45 +1,55 @@
-// import { IconButton, TextField } from "@mui/material";
 import React from "react";
 import PropTypes from "prop-types";
 import { useController } from "react-hook-form";
-// import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import CloseIconSvg from '../../../assets/icons/closeIcon.js'
 const InputFormFeild = (props) => {
   const {
     field: { value, onChange, ...rest },
-    // fieldState: { error },
-  } = useController({ name: props.name, defaultValue: "" });
+    fieldState: { error, isTouched},
+  
+  } = useController({ name: props.name });
   return (
-    <div>
+    <div className="relative w-[400px]">
       <input
+        type="text"
+        class={`form-control
+        block
+        px-3
+        h-[55px]
+        w-[367px]
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border-[1.8px] border-solid border-gray-300 
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+        ${error && "border-red-600"}
+        ${value && error == undefined && "border-green-600"}
+       `}
+        id="exampleFormControlInput1"
+        placeholder="Example label"
         {...props}
         {...rest}
         value={value}
         onChange={onChange}
-        className='border w-1/2 h-10'
-        
+      />
+      {value && value != "" && (
+        <CloseIconSvg
+          onClick={() => {
+            onChange("");
+          }}
+          class={`absolute right-[40px] bottom-[13.5px] w-7 cursor-pointer
+          ${value && "text-green-600"}
+          ${!isTouched && "text-blue-600"}
+          ${!isTouched&&value&&"text-blue-600"}
+
+        `}
         />
-      {/* <TextField
-        {...props}
-        {...rest}
-        value={value}
-        onChange={onChange}
-        className={props.className}
-        style={{ width: 400 }}
-        helperText={error?.message || ""}
-        error={!!error?.message}
-        InputProps={{
-          endAdornment: value && (
-            <IconButton
-              // style={{border:'1px solid black',borderRadius:'50%'}}
-              onClick={() => {
-                onChange("");
-              }}
-            >
-              <CloseRoundedIcon  />
-            </IconButton>
-          ),
-        }}
-      /> */}
+      )}
     </div>
   );
 };
