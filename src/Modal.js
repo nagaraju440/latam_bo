@@ -13,7 +13,7 @@ export default function Modal({ visible, onClose }) {
         className="card  bg-white p-3 rounded-md w-[500px] h-[500px] mt-12"
       >
         <div className="font-bold">
-          Modal sample
+          
           <button
             className="float-right p-1 hover:animate-pulse"
             onClick={onClose}
