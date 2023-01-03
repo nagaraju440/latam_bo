@@ -25,7 +25,7 @@ const NewCoursePage1 = () => {
           <InputFormFeild label="mode" name="mode" />
           <InputFormFeild label="zoom link" name="zoomLink" />
           <InputFormFeild label="private / public" name="pr/pb" />
-          <UiButton text="NEXT"  type="submit" />
+          <UiButton text="NEXT" type="submit" />
         </div>
       </Form>
     </div>

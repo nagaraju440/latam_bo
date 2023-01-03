@@ -3,6 +3,7 @@ import NewCourse from './pages/instructor/courses/new';
 import Modal from "./Modal";
 import StepIndicator from './pages/instructor/courses/StepIndicator/StepIndicator';
   import { useState } from 'react';
+import TimeDataRangePicker from './components/TimeDataRangPicker';
 
 function App() {
   const [showModal,setshowModal]=useState(false);
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <div>
-      <div className="maindiv">
+      {/* <div className="maindiv">
         <div className="headerbutton p-3">
           <button 
           onClick={()=>setshowModal(true)}
@@ -18,7 +19,8 @@ function App() {
         </div>
       </div> 
     <Modal onClose={handleOnClose} visible={showModal}><NewCourse/></Modal>
-    
+     */}
+     <TimeDataRangePicker/>
     </div>
   );
 }
