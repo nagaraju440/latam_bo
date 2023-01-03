@@ -2,7 +2,9 @@ import './App.css';
 import NewCourse from './pages/instructor/courses/new';
 import Modal from "./Modal";
 import StepIndicator from './pages/instructor/courses/StepIndicator/StepIndicator';
-  import { useState } from 'react';
+import { useState } from 'react';
+import NormalCloseSvg from "./assets/icons/NormalCloseIcon";
+
 
 function App() {
   const [showModal,setshowModal]=useState(false);

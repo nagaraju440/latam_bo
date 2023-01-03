@@ -8,9 +8,10 @@ const Stepper = (props) => {
   
   return (
     <>
-      <div>{props.stepsData[currentStep - 1].header}</div>
-      <div>{props.stepsData[currentStep - 1].descp}</div>
-      <div className="Steps">
+    <div>
+      <div className="flex text-[16px] text-gray-500 font-normal p-3 justify-center">{props.stepsData[currentStep - 1].header}</div>
+      <div className="flex text-[28px] font-medium justify-center">{props.stepsData[currentStep - 1].descp}</div>
+      <div className="Steps p-6">
         {steps?.map((step, i) => (
           <div
             key={i}
@@ -24,10 +25,10 @@ const Stepper = (props) => {
           </div>
         ))}
       </div>
-      <div>{props.stepsData[currentStep - 1].stepComponent}</div>
+      <div className="flex justify-center">{props.stepsData[currentStep - 1].stepComponent}</div>
       {!complete && (
         <button
-          className="btn"
+          className="btn bg-slate-300"
           onClick={() => {
             currentStep === steps.length
               ? setComplete(true)
@@ -37,6 +38,7 @@ const Stepper = (props) => {
           {currentStep === steps.length ? "Finish" : "Next"}
         </button>
       )}
+        </div>
     </>
   );
 };

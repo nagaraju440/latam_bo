@@ -1,5 +1,10 @@
 import Stepper from "../StepIndicator/StepIndicator";
 import NewCoursePage1 from "./NewCoursePage1";
+import NewCoursePage2 from "./NewCoursePage2";
+import NewCoursePage3 from "./NewCoursePage3";
+import NewCoursePage4 from "./NewCoursePage4";
+import NewCoursePage5 from "./NewCoursePage5";
+
 
 const NewCourse=()=>{
     return(
@@ -15,25 +20,30 @@ export default NewCourse;
 
 const stepsData = [
   {
-    header: "header 1",
-    descp: "description 1",
+    header: "NUEVO CURSO",
+    descp: "¿Qué curso estarás enseñando?",
     stepComponent: <NewCoursePage1 />,
   },
   {
-    header: "header 2",
-    descp: "description 2",
-    stepComponent: <NewCoursePage1 />,
+    header: "NUEVO CURSO",
+    descp: "Alcance",
+    stepComponent: <NewCoursePage2/>,
     
   },
   {
-    header: "header 3",
-    descp: "description 1",
-    stepComponent: <NewCoursePage1 />,
+    header: "NUEVO CURSO",
+    descp: "Información extra",
+    stepComponent: <NewCoursePage3 />,
   },
   {
-    header: "header 4",
-    descp: "description 4",
-    stepComponent: <NewCoursePage1 />,
+    header: "NUEVO CURSO",
+    descp: "Presupuesto",
+    stepComponent: <NewCoursePage4 />,
+  },
+  {
+    header: "NUEVO CURSO",
+    descp: "Nuevo Gasto",
+    stepComponent: <NewCoursePage5 />,
   },
 
 ];
