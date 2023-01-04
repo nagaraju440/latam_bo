@@ -73,7 +73,9 @@ const EditComponent = () => {
     else setch("Editof");
   };
   return (
+    <>
     <div onClick={change}>{ch === "Editon" ? <Editon /> : <Editof />}</div>
+  </>
   );
 };
 const CheckboxComp=({id,a,setA})=>{

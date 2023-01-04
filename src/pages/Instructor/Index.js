@@ -21,7 +21,7 @@ export default function Index() {
           <HeaderLayout />
           <Filter />
           <Table />
-          DATA TABLE HERE
+          {/* DATA TABLE HERE */}
           {/* <EditComponent/> */}
         </div>
       </div>
