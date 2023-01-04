@@ -1,0 +1,11 @@
+[
+    {
+        "id":"id",
+        "status":"Estatus",
+        "type":"Nombre Campana",
+        "duration":"Duracion",
+        "format":"Agente MKT",
+        "instrutor":"Solicitante",
+        "pid":"Fecha Creacion"
+    }
+]

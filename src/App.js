@@ -1,35 +1,50 @@
-import './App.css';
-import React, { useState } from 'react';
-import Data from './data.json';
-import Table from './table.js';
+import "./App.css";
+import Table24 from "./Components/Table24";
+import Data from "./Components/Data";
+import { useState, useEffect } from "react";
+import Page from './Components/Page';
 
 function App() {
-  // const [checked, setChecked] = useState(false);
+
   
-    // const handleChange = () => {
-    //   setChecked(prevState => !prevState);
-    // };
+  useEffect(()=>{
+    Specific(1);
+  },[])
+  const [bigdata, setbigdata] = useState([]);
+  const [count, setcount] = useState(0);
+  const col = () => {
+    var temp=[]
+    Data.map((l)=>{
+      return temp=[...temp,l]
+    })
+  
+    setbigdata(temp.slice(count,count+10));
+  };
+  const next=()=>{
+    setcount(count+10);
+    col();
+  }
+  
+  
+  const prev=()=>{
+    if(count>0)
+    setcount(count-10);
+    else
+    setcount(0);
+    col();
+  }
+  const Specific=(num)=>{
+        if(num===0)
+        setcount(0);
+        else
+        setcount((num-1)*10);
+        col();
+  }
+  
   return (
     <div>
-      {/* <div  className='text-xl bg-green-500' >hello tailwind text</div>
-      <h1>hello </h1>
-      {Data.map((Details,i)=>{
-        return <h1>{Details.id}</h1>
-      })} */}
-      {/* <div>
-      <input type="checkbox" onChange={handleChange} checked={checked} />
-      Select All
-      <br />
-      <input type="checkbox" checked={checked} />
-      Option 1
-      <br />
-      <input type="checkbox" checked={checked} />
-      Option 2
-      <br />
-      <input type="checkbox" checked={checked} />
-      Option 3
-    </div> */}
-    <Table/>
+      <Table24 data={bigdata} />
+      <Page col={col} Specific={Specific} prev={prev} next={next}/>
     </div>
   );
 }
