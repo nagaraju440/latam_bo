@@ -92,18 +92,18 @@ const NewCoursePage4 = () => {
         <div className="grid grid-cols-3 gap-3 text-gray-500">
             
             <div className="flex flex-row gap-2 items-center ">Hall Rental <Iicon/> </div>
-            <div><BudgetInputField name="Amount1" placeholder="Amount" /></div>
+            <div><BudgetInputField name="Amount2" placeholder="Amount" /></div>
             {/* <div><SelectComponent /></div> */}
-            <div><BudgetInputField name="Status1" placeholder="Status" /></div>
+            <div><NormalSelectComponent  name="select 1" selectOptionsData={SelectBoxOptions} /></div>
             <div className="flex flex-row gap-2 items-center">Materials <Iicon/></div>
             <div><BudgetInputField name="Amount2" placeholder="Amount" /></div>
-            <div><BudgetInputField name="Status2" placeholder="Status" /></div>
+            <div><NormalSelectComponent  name="select 1" selectOptionsData={SelectBoxOptions} /></div>
             <div className="flex flex-row gap-2 items-center">Tickets <Iicon/></div>
             <div><BudgetInputField name="Amount3" placeholder="Amount" /></div>
-            <div><BudgetInputField name="Status3" placeholder="Status" /></div>
+            <div><NormalSelectComponent  name="select 1" selectOptionsData={SelectBoxOptions} /></div>
             <div className="flex flex-row gap-2 items-center">Combustible <Iicon/></div>
             <div><BudgetInputField name="Amount4" placeholder="Amount" /></div>
-            <div><BudgetInputField name="Status4" placeholder="Status" /></div>
+            <div><NormalSelectComponent  name="select 1" selectOptionsData={SelectBoxOptions} /></div>
         </div>
         </Form>
       </Accordion>
