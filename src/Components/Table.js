@@ -18,7 +18,7 @@ function Table24(prob) {
         {Coldata.map((l) => {
           
           return (
-            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm w-[1045px] h-[13px]">
+            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm ">
              <ParentboxComp a={a} seta={setA}  t={t} len={prob.le} firstid={prob.first}/>
               <div className="">{l.id}</div>
               <div className="">{l.status}</div>
@@ -33,10 +33,10 @@ function Table24(prob) {
         {prob.data.map((l) => {
             
           var tid=parseInt(l.id.substring(3,7));
-            console.log(tid);
+            // console.log(tid);
           return (
             
-            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm w-[1045px] h-[65px]">
+            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm ">
               <CheckboxComp id={tid} a={a} setA={setA}/>
               <div className="underline decoration-1">{l.id}</div>
               <div
@@ -77,11 +77,11 @@ const EditComponent = () => {
   );
 };
 const CheckboxComp=({id,a,setA})=>{
-    console.log("hello",a.includes(id),a,id)
+    // console.log("hello",a.includes(id),a,id)
   const [, setChecked] = useState(false);
   const handleChange = () => {
     setChecked(prevState => !prevState);
-    console.log(id,a,setA)
+    // console.log(id,a,setA)
     
     if(a.includes(id))
     {
