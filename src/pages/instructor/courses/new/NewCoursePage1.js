@@ -41,11 +41,11 @@ const NewCoursePage1 = () => {
               placeholder="type the course"
               selectOptionsData={SelectBoxOptions}
             />
-            <SelectComponent
+            {/* <SelectComponent
               name="private/public"
               placeholder="type the course"
               selectOptionsData={SelectBoxOptions}
-            />
+            /> */}
           <UiButton text="NEXT" type="submit" />
         </div>
       </Form>
