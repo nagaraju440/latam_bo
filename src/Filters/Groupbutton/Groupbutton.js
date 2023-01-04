@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-function ButtonGroup({ buttons }){
+function ButtonGroup({ buttons }) {
   const [clickedId, setClickedId] = useState(-1);
   return (
     <div className="flex py-1 pl-1">
@@ -10,5 +10,5 @@ function ButtonGroup({ buttons }){
       ))}
     </div>
   );
-};
+}
 export default ButtonGroup;

@@ -1,8 +1,8 @@
-import React from 'react'
-import CalenderIcon from '../assets/Icons/CalenderIcon.png';
-import Dropdownicon from '../assets/Icons/DropdownIcon.png';
+import React from "react";
+import CalenderIcon from "../assets/Icons/CalenderIcon.png";
+import Dropdownicon from "../assets/Icons/DropdownIcon.png";
 import ButtonGroup from "./Groupbutton/Groupbutton";
-import EstatusComponent from '../EstatusComponent/EstatusComponent';
+import EstatusComponent from "../EstatusComponent/EstatusComponent";
 function Section2() {
     const printButtonLabel = (event) => {
         console.log(event.target.name);
@@ -45,4 +45,4 @@ function Section2() {
     )
 }
 
-export default Section2
+export default Section2;
