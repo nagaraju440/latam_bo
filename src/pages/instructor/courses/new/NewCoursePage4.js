@@ -37,7 +37,7 @@ const NewCoursePage4 = () => {
           <div><NormalInputFormField name="1" /></div>
           
           </div>
-          <NormalInputFormField name="1" />
+          
           
 
         </Form>
