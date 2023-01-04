@@ -9,7 +9,7 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage:{
-        'dashboard-card-image':"url('./src/assests/girl namaste phose.png')"
+        'dashboard-card-image':"url('/src/assests/girl_namaste_phose.png')"
       }
     },
   },

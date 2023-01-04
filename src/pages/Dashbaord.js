@@ -4,15 +4,15 @@ import Sidebar from "../components/Sidebar";
 
 export const Dashbaord = () => {
     return (
-        <div className=" ">
-            <div>nav</div>
+        <div className="border ">
+            <Navbar />
             <div>
-                <div>part 1</div>
-                <div>part 2</div>
-                <div>part 3</div>
+                <div>
+                    <Sidebar />
+                </div>
+                <div className=""> middle component</div>
+                <div>ending component</div>
             </div>
-
-           
         </div>
     );
 };

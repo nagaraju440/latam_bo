@@ -8,15 +8,14 @@ import Sidebar from "./components/Sidebar";
 import { Dashbaord } from "./pages/Dashbaord";
 
 function App() {
-    return (
-        <div className="App">
-            {/* <Dashbaord/> */}
-            <Card/>
-            {/* <Cards/> */}
-            {/* <Notification/> */}
-            <Slider/>
-        </div>
-    );
+  return (
+    <div>
+      {/* <div  className='text-xl bg-green-500' >hello tailwind text</div> */}
+      {/* <Notification /> */}
+      {/* <Dashbaord/> */}
+      <Card />
+    </div>
+  );
 }
 
 export default App;
