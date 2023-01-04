@@ -21,6 +21,7 @@ const NewCoursePage2 = () => {
         schema={schema}
       >
         <div className="flex flex-col space-y-4 m-10 w-[400px]">
+          <div>bewhjbvkjzdsb k</div>
           <InputFormFeild label="name" name="name"/>
           <InputFormFeild label="mode" name="mode" />
           <InputFormFeild label="zoom link" name="zoomLink" />

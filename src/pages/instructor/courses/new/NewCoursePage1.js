@@ -10,6 +10,12 @@ const schema = yup.object().shape({
   "pr/pb": yup.string().required(),
   isit: yup.string().required(),
 });
+const SelectBoxOptions = [
+  { name: "option 1" },
+  { name: "option 2" },
+  { name: "option 3" },
+  { name: "option 4" },
+];
 const NewCoursePage1 = () => {
   const handleSubmit = (data) => {
     console.log("data is", data);
@@ -18,20 +24,12 @@ const NewCoursePage1 = () => {
     <div>
       <Form onSubmit={handleSubmit} schema={schema}>
         <div className="flex flex-col space-y-4 m-10 w-[400px]">
-          <div  className='z-1' >
+          
             <SelectComponent
               name="name"
               placeholder="type the course"
-              selectOptionsData={[
-                { name: "option 1" },
-                { name: "option 2" },
-                { name: "option 3" },
-                { name: "option 4" },
-              ]}
+              selectOptionsData={SelectBoxOptions}
             />
-          </div>
-          {/* <div>hellooooooooooooooooooooooooooooooooooooooooooooooo</div> */}
-          <InputFormFeild label="name" name="name" />
           <InputFormFeild label="mode" name="mode" />
           <InputFormFeild label="zoom link" name="zoomLink" />
           <InputFormFeild label="private / public" name="pr/pb" />

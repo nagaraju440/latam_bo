@@ -11,11 +11,14 @@ const SelectComponent = ({name , selectOptionsData}) => {
    field: { value, onChange, ...rest },
    fieldState: { error, isTouched },
  } = useController({ name: name });
-  
+  const handleSelectToggle=()=>{
+     setOpen(!open);
+
+  }
   return (
-    <div className="w-[367px]  font-medium  relative ">
+    <div  id="select" className="w-[367px]   font-medium  relative ">
       <div
-        onClick={() => setOpen(!open)}
+        onClick={handleSelectToggle}
         className={`bg-white w-full p-2 flex items-center h-[55px] justify-between border rounded ${
           !value && "text-gray-700"
         }
@@ -43,9 +46,9 @@ const SelectComponent = ({name , selectOptionsData}) => {
         )}
       </div>
       <ul
-        className={`bg-white mt-2 absolute right-0   overflow-y-auto w-3/4 float-right ${
+        className={`bg-white mt-2  fixed   overflow-y-auto w-1/4  ${
           open ? "max-h-60" : "hidden"
-        } border-[1.5px] shadow-xl p-3 `}
+        } border-[1.5px] shadow-xl p-3  z-50  `}
       >
         <div className="flex items-center px-2 sticky top-0 bg-white   border-[1.5px] ">
           <input
@@ -87,13 +90,11 @@ const SelectComponent = ({name , selectOptionsData}) => {
             onClick={() => {
               if (option?.name?.toLowerCase() !== value?.toLowerCase()) {
                 onChange(option.name);
-                // setvalue(option?.name);
                 setOpen(false);
                 setInputValue("");
               }
             }}
           >
-            {/* <li>{value}</li> */}
             {option?.name}
           </li>
         ))}

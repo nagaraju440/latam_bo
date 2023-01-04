@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Accordion({children}) {
+export default function Accordion({children,name,id}) {
   return (
     <div class="accordion" id="accordionExample">
-    <div class="accordion-item bg-white border border-gray-200">
+    <div class="accordion-item bg-white border w-[350px] ">
       <h2 class="accordion-header mb-0" id="headingOne">
         <button class="
           relative
@@ -18,14 +18,14 @@ export default function Accordion({children}) {
           rounded-none
           transition
           focus:outline-none
-        " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-          aria-controls="collapseOne">
-          Participantes
+        " type="button" data-bs-toggle="collapse" data-bs-target={`#${id}`} aria-expanded="true"
+          aria-controls={id}>
+          {name}
         </button>
       </h2>
       
     </div>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+    <div id={id} class="accordion-collapse collapse show" aria-labelledby="headingOne"
         data-bs-parent="#accordionExample">
         <div class="accordion-body py-4 px-5">
           {children}

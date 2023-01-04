@@ -16,12 +16,21 @@ const NewCoursePage4 = () => {
   };
   return (
    <div>
-    <Accordion>
+    <Accordion name="Participantes" id="pa" >
         <div>hello bhuuuuuu</div>
-    </Accordion>
-    <Accordion>
         <div>hello bhuuuuuu</div>
+
     </Accordion>
+    
+
+
+    <Accordion  name="Gastos" id="gasto" >
+        <div>bhuvanesh</div>
+    </Accordion>
+
+    {/* <Accordion>
+        <div>hello bhuuuuuu</div>
+    </Accordion> */}
    </div>
   );
 };
