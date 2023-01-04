@@ -1,5 +1,5 @@
 import React from "react";
-import bell from "../assets/bell.svg";
+import bell from "../assets/icons/bell.svg";
 function Notification() {
     const Data = [
         { id: "1", text: "Lorem ipsum dolor sit amet, consectetur" },
@@ -8,13 +8,10 @@ function Notification() {
         { id: "4", text: "Lorem ipsum dolor sit amet, consectetur" },
     ];
     return (
-        <div className="m-10">
             <div className=" border border-[#D7D7D7] h-72 w-96 p-7 rounded  flex flex-col">
                 <div className="flex flex-row gap-3">
                     <img src={bell} alt="this is notification svg"></img>
-                    <p className="text-[21px] font-semibold text-[#59595B]">
-                        Notifications
-                    </p>
+                    <p className="text-[21px] font-semibold text-[#59595B]">Notifications</p>
                 </div>
                 {Data.map((item) => {
                     return (
@@ -22,12 +19,13 @@ function Notification() {
                             <div className="flex justify-center text-[16px] text-[#59595B] font-normal leading-9">
                                 {item.text}
                             </div>
-                            <hr></hr>
+                            <div className="my-2">
+                            {Data.length == item.id ?console.log("Hello"):<hr></hr> }
+                            </div>
                         </div>
                     );
                 })}
             </div>
-        </div>
     );
 }
 
