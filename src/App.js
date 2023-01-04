@@ -8,9 +8,11 @@ import { Dashbaord } from "./pages/Dashbaord";
 function App() {
     return (
         <div className="App">
-            {/* <Dashbaord/> */}
+            <Dashbaord/>
             {/* <Cards/> */}
-            <Notification/>
+            {/* <Notification/> */}
+            {/* <Navbar/>
+            <Sidebar/> */}
         </div>
     );
 }
