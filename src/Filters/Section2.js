@@ -1,7 +1,7 @@
 import React from 'react'
 import CalenderIcon from '../assets/Icons/CalenderIcon.png';
 import Dropdownicon from '../assets/Icons/DropdownIcon.png';
-import ButtonGroup from "../Section2/Gropubutton/Groupbutton";
+import ButtonGroup from "./Groupbutton/Groupbutton";
 
 function Section2() {
     const printButtonLabel = (event) => {
