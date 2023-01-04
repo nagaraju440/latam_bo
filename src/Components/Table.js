@@ -12,9 +12,9 @@ function Table24(prob) {
   var t=parseInt(D.substring(10,14));
   console.log(t)
    return (
-    <div className="bg-background font-normal  text-sm">
+    <div className="bg-background font-normal  text-sm ">
         
-      <div className="flex flex-col gap-2 content-center justify-center  p-5 ">
+      <div className="flex flex-col gap-2 content-center justify-center  p-5  ">
         {Coldata.map((l) => {
           
           return (
