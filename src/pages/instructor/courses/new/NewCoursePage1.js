@@ -35,14 +35,13 @@ const NewCoursePage1 = () => {
             selectOptionsData={SelectBoxOptions}
           />
           <InputFormFeild label="zoom link" name="zoomLink" />
-          <InputFormFeild label="zoom link" name="zoomLink" />
           <SelectComponent
-            name="private/public"
+            name="pr/pb"
             placeholder="type the course"
             selectOptionsData={SelectBoxOptions}
           />
           <SelectComponent
-            name="private/public"
+            name="isit"
             placeholder="type the course"
             selectOptionsData={SelectBoxOptions}
           />
