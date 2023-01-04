@@ -4,6 +4,7 @@ import UiButton from "../../../../UiCore/FormComponent/UiButton/UiButton";
 import * as yup from "yup";
 import Accordion from "../../../../components/Accordion";
 import NormalInputFormField from "../../../../UiCore/FormComponent/NormalInputFeild/NormalInputField";
+import BudgetInputField from "../../../../UiCore/FormComponent/BudgetInputField/BudgetInputField";
 import Iicon from "../../../../assets/icons/iicon";
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -22,9 +23,9 @@ const NewCoursePage4 = () => {
         <Form onSubmit={() => {}}>
           <div className="grid grid-cols-2 gap-5 text-base text-gray-500 text-left ">
             
-          <div className=" flex flex-row gap-2 items-center" >Participantes totales <span ><Iicon/> </span> </div>
+          <div className=" flex flex-row  items-center" >Participantes totales <span className="text-red-500">* </span> </div>
           <div><NormalInputFormField name="1" /></div>
-          <div >Cuanta genta del taller</div>
+          <div className="items-center">Cuanta genta del taller</div>
           <div><NormalInputFormField name="1" /></div>
           <div className=" flex flex-row gap-2 items-center">Regular full<span><Iicon/> </span> </div>
           <div><NormalInputFormField name="1" /></div>
@@ -45,9 +46,22 @@ const NewCoursePage4 = () => {
       </Accordion>
       <Accordion name="Gastos" id="gasto">
         <Form onSubmit={() => {}}>
-          <div>a</div>
-          <NormalInputFormField name="1" />
-          <div>b</div>
+        <div className="grid grid-cols-3 gap-3 text-gray-500">
+            
+            <div className="flex flex-row gap-2 items-center ">Hall Rental <Iicon/> </div>
+            <div><BudgetInputField name="Amount1" placeholder="Amount" /></div>
+            {/* <div><SelectComponent /></div> */}
+            <div><BudgetInputField name="Status1" placeholder="Status" /></div>
+            <div className="flex flex-row gap-2 items-center">Materials <Iicon/></div>
+            <div><BudgetInputField name="Amount2" placeholder="Amount" /></div>
+            <div><BudgetInputField name="Status2" placeholder="Status" /></div>
+            <div className="flex flex-row gap-2 items-center">Tickets <Iicon/></div>
+            <div><BudgetInputField name="Amount3" placeholder="Amount" /></div>
+            <div><BudgetInputField name="Status3" placeholder="Status" /></div>
+            <div className="flex flex-row gap-2 items-center">Combustible <Iicon/></div>
+            <div><BudgetInputField name="Amount4" placeholder="Amount" /></div>
+            <div><BudgetInputField name="Status4" placeholder="Status" /></div>
+        </div>
         </Form>
       </Accordion>
 
