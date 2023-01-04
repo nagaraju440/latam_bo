@@ -3,7 +3,7 @@ import { useController } from "react-hook-form";
 import CloseIconSvg from "../../assets/icons/closeIcon";
 import DropDownIcon from "../../assets/icons/DropDownIcon";
 
-const SelectComponent = ({name , selectOptionsData}) => {
+const SelectComponent = ({name , selectOptionsData,placeholder}) => {
   const [inputValue, setInputValue] = useState("");
 //   const [value, setvalue] = useState("");
   const [open, setOpen] = useState(false);
@@ -16,7 +16,7 @@ const SelectComponent = ({name , selectOptionsData}) => {
 
   }
   return (
-    <div id="select" className="w-[367px]   font-medium  relative ">
+    <div id="select" className="w-[400px]   font-medium  relative ">
       <div
         onClick={handleSelectToggle}
         className={`bg-white w-full p-2 flex items-center h-[55px] justify-between border rounded-[8px] ${
@@ -30,7 +30,7 @@ const SelectComponent = ({name , selectOptionsData}) => {
           ? value?.length > 25
             ? value?.substring(0, 25) + "..."
             : value
-          : "Select option"}
+          : placeholder}
         {/* Drop down icon */}
         {value && value != "" ? (
           <CloseIconSvg

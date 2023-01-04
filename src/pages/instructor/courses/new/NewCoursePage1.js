@@ -23,7 +23,7 @@ const NewCoursePage1 = () => {
   return (
     <div>
       <Form onSubmit={handleSubmit} schema={schema}>
-        <div className="flex flex-col space-y-4 m-10 w-[400px]">
+        <div className="flex flex-col space-y-4 m-10">
           <SelectComponent
             name="name"
             placeholder="type the course"
@@ -34,7 +34,7 @@ const NewCoursePage1 = () => {
             placeholder="type the course"
             selectOptionsData={SelectBoxOptions}
           />
-          <InputFormFeild label="zoom link" name="zoomLink" />
+          <InputFormFeild label="zoom link" name="zoomLink" placeholder="zoom link" />
           <SelectComponent
             name="pr/pb"
             placeholder="type the course"

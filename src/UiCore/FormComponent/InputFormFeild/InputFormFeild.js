@@ -16,13 +16,13 @@ const InputFormFeild = (props) => {
         block
         px-3
         h-[55px]
-        w-[367px]
+        w-[400px]
         text-base
         font-normal
         text-gray-700
         bg-white bg-clip-padding
         border-[1px] border-solid border-gray-300 
-        rounded
+        
         transition
         ease-in-out
         m-0
@@ -31,7 +31,7 @@ const InputFormFeild = (props) => {
         ${value && error == undefined && "border-green-600"}
        `}
         id="exampleFormControlInput1"
-        placeholder="Example label"
+        placeholder={props.placeholder}
         {...props}
         {...rest}
         value={value}
