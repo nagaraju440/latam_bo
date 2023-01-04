@@ -16,16 +16,16 @@ const SelectComponent = ({name , selectOptionsData}) => {
 
   }
   return (
-    <div  id="select" className="w-[367px]   font-medium  relative ">
+    <div id="select" className="w-[367px]   font-medium  relative ">
       <div
         onClick={handleSelectToggle}
-        className={`bg-white w-full p-2 flex items-center h-[55px] justify-between border rounded ${
+        className={`bg-white w-full p-2 flex items-center h-[55px] justify-between border rounded-[8px] ${
           !value && "text-gray-700"
         }
         ${error && "border-red-600"}
         ${value && error == undefined && "border-green-600"} 
         `}
-      > 
+      >
         {value
           ? value?.length > 25
             ? value?.substring(0, 25) + "..."
@@ -48,9 +48,9 @@ const SelectComponent = ({name , selectOptionsData}) => {
       <ul
         className={`bg-white mt-2  fixed   overflow-y-auto w-1/4  ${
           open ? "max-h-60" : "hidden"
-        } border-[1.5px] shadow-xl p-3  z-50  `}
+        } border-[1px] shadow-xl p-3  z-50  rounded-[10px] `}
       >
-        <div className="flex items-center px-2 sticky top-0 bg-white   border-[1.5px] ">
+        <div className="flex items-center px-2 sticky top-0 bg-white   border-[1px] rounded-[8px] ">
           <input
             type="text"
             value={inputValue}
