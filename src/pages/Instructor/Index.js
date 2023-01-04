@@ -7,22 +7,16 @@ import EditComponent from '../../EditComponent/EditComponent'
 
 export default function Index() {
   return (
-    <div>Index
-        <div style={{paddingTop:"50px"}}>
-        <Navbar/>
-        </div>
-        <div style={{display:"flex",flexDirection:'row'}}>
-            <div style={{float:"left",width:"25%"}}>
-            <Sidebar/>
-            </div>
-            <div style={{display:"flex",width:"100%",flexDirection:'column',float:'right'}}>
-
-            <HeaderLayout/>
+    <div className="border h-screen w-screen  ">
+    <div className="h-20"><Navbar/></div>
+    <div className="bg-yellow-200 grid grid-cols-10 h-full">
+        <div className="col-span-2"><Sidebar/> </div>
+        <div className="bg-grey-200 col-span-8">
+        <HeaderLayout/>
         <Filter/>
-        
-        <EditComponent/> 
-            </div>
+        <EditComponent/>
         </div>
     </div>
+</div>
   )
 }

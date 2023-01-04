@@ -10,7 +10,6 @@ import Page from './components/Page';
 import Instructor from './pages/Instructor/Index'
 
 function App() {
-<<<<<<< HEAD
 
   
   // useEffect(()=>{
@@ -60,13 +59,5 @@ function App() {
       </div>
   )
     }
-=======
-    return (
-        <div>
-            <Dashbaord /> 
-        </div>
-    );
-}
->>>>>>> dashboard
 
 export default App
