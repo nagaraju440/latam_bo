@@ -17,9 +17,29 @@ const NewCoursePage4 = () => {
   };
   return (
     <div>
-      <Accordion name="Participantes" id="pa">
+      <Accordion name="Participantes" id="pa" >
         <Form onSubmit={() => {}}>
-          <NormalInputFormField name="1" />
+          <div className="grid grid-cols-2 gap-5">
+            
+          <div>Participantes totales</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div>Cuanta genta del taller</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div>Regular full</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div>Regular de tallers</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div>Repitents</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div>Referidos memberesia</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div>Repitents memberesia</div>
+          <div><NormalInputFormField name="1" /></div>
+          
+          </div>
+          
+          
+
         </Form>
       </Accordion>
       <Accordion name="Gastos" id="gasto">
