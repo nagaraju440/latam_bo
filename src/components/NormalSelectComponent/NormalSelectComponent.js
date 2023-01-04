@@ -6,7 +6,7 @@ import DropDownIcon from "../../assets/icons/DropDownIcon";
 const NormalSelectComponent = ({name , selectOptionsData}) => {
   const [inputValue, setInputValue] = useState("");
 //   const [value, setvalue] = useState("");
-  const [open, setOpen] = useState(false);
+const [open, setOpen] = useState(false);
  const {
    field: { value, onChange, ...rest },
    fieldState: { error, isTouched },
@@ -39,7 +39,7 @@ const NormalSelectComponent = ({name , selectOptionsData}) => {
           open ? "max-h-60" : "hidden"
         } border-[1px] shadow-xl p-3  z-50  rounded-[10px] `}
       >
-        <div className="flex items-center px-2 sticky top-0 bg-white   border-[1px] rounded-[8px] ">
+        <div className="flex items-center px-2 sticky top-0 bg-white border-[1px] rounded-[8px]">
           <input
             type="text"
             value={inputValue}
