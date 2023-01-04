@@ -38,7 +38,7 @@ function Table(prob) {
               <div className="underline decoration-1">{l.id}</div>
               <div
                 className={
-                  l.status === "Revisión"? " text-Revision underline":(l.status === "Promoción"? " text-Promocion underline":(l.status === "Cursada"? " text-Promocion underline":((l.status === "Promoción"? " text-Promocion underline""text-Cierre underline"))  
+                  l.status === "Aprobacion"? " text-Aprobacion underline":(l.status === "Promoción"? " text-Promocion underline":(l.status === "Cursada"? " text-Promocion underline":((l.status === "Rendicion"? " text-Rendicion underline":"text-Cierre underline"))))
                 }
               >
                 {l.status}
@@ -48,7 +48,7 @@ function Table(prob) {
               <div className="">{l.type}</div>
               <div className="">{l.instrutor}</div>
               <div className="">{l.pid}</div>
-              <div className="flex items-end ">
+              <div className="flex items-end justify-end">
                 <EditComponent />
               </div>
             </div>

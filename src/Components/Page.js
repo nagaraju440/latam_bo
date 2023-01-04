@@ -24,15 +24,17 @@ function Page(prob) {
   const handleClick = (l) => {
     prob.Specific(parseInt(l));
     setactivenumber(l);
+    // console.log(activenumber);
   };
   const righthandle = () => {
     prob.next();
-    setactivenumber(activenumber + 1);
+    setactivenumber(parseInt(activenumber) + 1);
   };
 
   const lefthandle = () => {
     prob.prev();
-    setactivenumber(activenumber - 1);
+    setactivenumber(parseInt(activenumber) - 1);
+    console.log(activenumber);
   };
 
   return (
@@ -54,7 +56,7 @@ function Page(prob) {
                   : "text-listunactive cursor-pointer"
               }
             >
-              <div className="truncate ...">{l}</div>
+              <div className="">{l}</div>
             </li>
           );
         })}
