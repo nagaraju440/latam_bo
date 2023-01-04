@@ -4,6 +4,7 @@ import UiButton from "../../../../UiCore/FormComponent/UiButton/UiButton";
 import * as yup from "yup";
 import Accordion from "../../../../components/Accordion";
 import NormalInputFormField from "../../../../UiCore/FormComponent/NormalInputFeild/NormalInputField";
+import Iicon from "../../../../assets/icons/iicon";
 const schema = yup.object().shape({
   name: yup.string().required(),
   mode: yup.string().required(),
@@ -19,21 +20,21 @@ const NewCoursePage4 = () => {
     <div>
       <Accordion name="Participantes" id="pa" >
         <Form onSubmit={() => {}}>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 gap-5 text-base text-gray-500 text-left ">
             
-          <div  className="text-base text-gray-500 text-left " >Participantes totales</div>
+          <div className=" flex flex-row gap-2 items-center" >Participantes totales <span ><Iicon/> </span> </div>
           <div><NormalInputFormField name="1" /></div>
-          <div className="text-base text-gray-500 text-left ">Cuanta genta del taller</div>
+          <div >Cuanta genta del taller</div>
           <div><NormalInputFormField name="1" /></div>
-          <div className="text-base text-gray-500 text-left ">Regular full</div>
+          <div className=" flex flex-row gap-2 items-center">Regular full<span><Iicon/> </span> </div>
           <div><NormalInputFormField name="1" /></div>
-          <div className="text-base text-gray-500 text-left ">Regular de tallers</div>
+          <div className=" flex flex-row gap-2 items-center">Regular de tallers <span><Iicon/> </span></div>
           <div><NormalInputFormField name="1" /></div>
-          <div className="text-base text-gray-500 text-left">Repitents</div>
+          <div className=" flex flex-row gap-2 items-center">Repitents <span><Iicon/> </span></div>
           <div><NormalInputFormField name="1" /></div>
-          <div className="text-base text-gray-500 text-left">Referidos memberesia</div>
+          <div className=" flex flex-row gap-2 items-center">Referidos memberesia <span><Iicon/> </span></div>
           <div><NormalInputFormField name="1" /></div>
-          <div className="text-base text-gray-500 text-left">Repitents memberesia</div>
+          <div className=" flex flex-row gap-2 items-center">Repitents memberesia <span><Iicon/> </span></div>
           <div><NormalInputFormField name="1" /></div>
           
           </div>
