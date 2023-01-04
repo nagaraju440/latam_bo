@@ -3,6 +3,7 @@ import InputFormFeild from "../../../../UiCore/FormComponent/InputFormFeild/Inpu
 import UiButton from "../../../../UiCore/FormComponent/UiButton/UiButton";
 import * as yup from "yup";
 import Accordion from "../../../../components/Accordion";
+import NormalInputFormField from "../../../../UiCore/FormComponent/InputFormField/NormalInputField";
 const schema = yup.object().shape({
   name: yup.string().required(),
   mode: yup.string().required(),
@@ -15,23 +16,21 @@ const NewCoursePage4 = () => {
     console.log("data is", data);
   };
   return (
-   <div>
-    <Accordion name="Participantes" id="pa" >
-        <div>hello bhuuuuuu</div>
-        <div>hello bhuuuuuu</div>
+    <div>
+      <Accordion name="Participantes" id="pa">
+        <Form onSubmit={() => {}}>
+          <NormalInputFormField name="1" />
+        </Form>
+      </Accordion>
 
-    </Accordion>
-    
-
-
-    <Accordion  name="Gastos" id="gasto" >
+      <Accordion name="Gastos" id="gasto">
         <div>bhuvanesh</div>
-    </Accordion>
+      </Accordion>
 
-    {/* <Accordion>
+      {/* <Accordion>
         <div>hello bhuuuuuu</div>
     </Accordion> */}
-   </div>
+    </div>
   );
 };
 
