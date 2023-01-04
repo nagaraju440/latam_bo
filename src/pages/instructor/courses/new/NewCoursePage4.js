@@ -21,19 +21,19 @@ const NewCoursePage4 = () => {
         <Form onSubmit={() => {}}>
           <div className="grid grid-cols-2 gap-5">
             
-          <div>Participantes totales</div>
+          <div  className="text-base text-gray-500 text-left " >Participantes totales</div>
           <div><NormalInputFormField name="1" /></div>
-          <div>Cuanta genta del taller</div>
+          <div className="text-base text-gray-500 text-left ">Cuanta genta del taller</div>
           <div><NormalInputFormField name="1" /></div>
-          <div>Regular full</div>
+          <div className="text-base text-gray-500 text-left ">Regular full</div>
           <div><NormalInputFormField name="1" /></div>
-          <div>Regular de tallers</div>
+          <div className="text-base text-gray-500 text-left ">Regular de tallers</div>
           <div><NormalInputFormField name="1" /></div>
-          <div>Repitents</div>
+          <div className="text-base text-gray-500 text-left">Repitents</div>
           <div><NormalInputFormField name="1" /></div>
-          <div>Referidos memberesia</div>
+          <div className="text-base text-gray-500 text-left">Referidos memberesia</div>
           <div><NormalInputFormField name="1" /></div>
-          <div>Repitents memberesia</div>
+          <div className="text-base text-gray-500 text-left">Repitents memberesia</div>
           <div><NormalInputFormField name="1" /></div>
           
           </div>
