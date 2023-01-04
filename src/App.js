@@ -1,12 +1,12 @@
 import "./App.css";
-import { Dashbaord } from "./pages/Dashbaord";
-import HeaderLayout from './HeaderLayout/HeaderLayout';
-import Section2 from './Filters/Section2';
-import EditComponent from './EditComponent/EditComponent';
-import Table24 from "./components/Table24";
-import Data from "./components/Data";
-import { useState, useEffect } from "react";
-import Page from './components/Page';
+// import { Dashbaord } from "./pages/Dashbaord";
+// import HeaderLayout from './HeaderLayout/HeaderLayout';
+// import Section2 from './Filters/Section2';
+// import EditComponent from './EditComponent/EditComponent';
+// import Table24 from "./components/Table24";
+// import Data from "./components/Data";
+// import { useState, useEffect } from "react";
+// import Page from './components/Page';
 import Instructor from './pages/Instructor/Index'
 
 function App() {
