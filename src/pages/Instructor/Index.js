@@ -7,13 +7,14 @@ import EditComponent from '../../EstatusComponent/EstatusComponent'
 
 export default function Index() {
   return (
-    <div className="border ">
+    <div>
     <div className="h-20"><Navbar/></div>
     <div className="bg-yellow-200 grid grid-cols-10 h-full">
         <div className="col-span-2"><Sidebar/> </div>
         <div className="bg-grey-200 col-span-8">
         <HeaderLayout/>
         <Filter/>
+        DATA TABLE HERE
         {/* <EditComponent/> */}
         </div>
     </div>
