@@ -8,15 +8,15 @@ function Notification() {
         { id: "4", text: "Lorem ipsum dolor sit amet, consectetur" },
     ];
     return (
-            <div className=" border border-[#D7D7D7] h-72 w-96 p-7 rounded  flex flex-col">
+            <div className=" border border-[#D7D7D7] h-72 w-96 p-7 rounded-[9px]  flex flex-col">
                 <div className="flex flex-row gap-3">
                     <img src={bell} alt="this is notification svg"></img>
-                    <p className="text-[21px] font-semibold text-[#59595B]">Notifications</p>
+                    <p className="text-[21px] font-semibold text-[#59595B]">NOTIFICACIONES</p>
                 </div>
                 {Data.map((item) => {
                     return (
                         <div className="items-center ">
-                            <div className="flex justify-center text-[16px] text-[#59595B] font-normal leading-9">
+                            <div className="flex justify-center text-[16px] text-[#59595B] font-normal leading-9  ">
                                 {item.text}
                             </div>
                             <div className="my-2">
