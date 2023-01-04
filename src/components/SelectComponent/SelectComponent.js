@@ -46,7 +46,7 @@ const SelectComponent = ({name , selectOptionsData}) => {
         )}
       </div>
       <ul
-        className={`bg-white mt-2  fixed   overflow-y-auto w-1/4  ${
+        className={`bg-white mt-2  fixed   overflow-y-auto w-[220px]  ${
           open ? "max-h-60" : "hidden"
         } border-[1px] shadow-xl p-3  z-50  rounded-[10px] `}
       >
