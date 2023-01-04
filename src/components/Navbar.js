@@ -2,14 +2,14 @@ import React from "react";
 
 // icons
 
-import Menu from "../../assets/icons/menu_icon.svg"
-import Aol_logo from "../../assets/icons/aol_logo.png"
-import Search from "../../assets/icons/search_icon.svg"
-import Vertical_line from "../../assets/icons/vertical_line.svg"
-import Profile from "../../assets/icons/profile_icon.png"
-import Bell from "../../assets/icons/bell_icon.svg"
+import Menu from "../assests/menu_icon.svg"
+import Aol_logo from "../assests/aol_logo.png"
+import Search from "../assests/search_icon.svg"
+import Vertical_line from "../assests/vertical_line.svg"
+import Profile from "../assests/profile_icon.png"
+import Bell from "../assests/bell_icon.svg"
 
-export const Navbar = () => {
+const Navbar = () => {
     return (
         <div className="flex fixed w-screen top-0 flex-row items-center px-12 h-20 bg-white">
             <img src={Menu} className="cursor-pointer h-4 w-auto" alt="i am a menu icon" />
@@ -22,3 +22,5 @@ export const Navbar = () => {
         </div>
     );
 }
+
+export default Navbar;
