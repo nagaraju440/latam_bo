@@ -2,7 +2,6 @@ import React from "react";
 import videoicon from "../assets/icons/videoicon.svg";
 function Carouselcards() {
   return (
-    <div className="flex justify-center">
       <div className="flex w-72 shadow-md h-52 rounded-[9px] flex-col p-5">
         <div className="flex-1 items-start">
            <div className="flex flex-row gap-3">
@@ -21,7 +20,7 @@ function Carouselcards() {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 

@@ -1,11 +1,14 @@
 import "./App.css";
 import { Dashbaord } from "./pages/Dashbaord";
-import Carouselcards from "./components/Section2/Carouselcards";
+import Notifications from "./components/Section2/Notifications";
+import Searchcard from "./components/Section2/Searchcard";
 // import Introcard from "./components/Section2/Introcard";
 function App() {
     return (
         <div>
-            <Dashbaord />
+            {/* <Dashbaord /> */}
+            <Searchcard/>
+            {/* <Notifications/> */}
             
         </div>
     );
