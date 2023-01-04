@@ -11,7 +11,7 @@ import Bell from "../assests/bell_icon.svg"
 
 const Navbar = () => {
     return (
-        <div className="flex fixed w-screen top-0 flex-row items-center px-12 h-20 bg-white">
+        <div className="border-b flex fixed w-screen top-0 flex-row items-center px-12 h-20 bg-white">
             <img src={Menu} className="cursor-pointer h-4 w-auto" alt="i am a menu icon" />
             <img src={Aol_logo} alt="art of living brand logo" className="h-13 m-auto w-auto cursor-pointer" />
             <img src={Search} className="cursor-pointer h-5 w-auto mx-3" alt="i am the search icon in the nav bar" />
