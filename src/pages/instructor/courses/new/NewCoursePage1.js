@@ -24,28 +24,28 @@ const NewCoursePage1 = () => {
     <div>
       <Form onSubmit={handleSubmit} schema={schema}>
         <div className="flex flex-col space-y-4 m-10 w-[400px]">
-          
-            <SelectComponent
-              name="name"
-              placeholder="type the course"
-              selectOptionsData={SelectBoxOptions}
-            />
-           <SelectComponent
-              name="mode"
-              placeholder="type the course"
-              selectOptionsData={SelectBoxOptions}
-            />
+          <SelectComponent
+            name="name"
+            placeholder="type the course"
+            selectOptionsData={SelectBoxOptions}
+          />
+          <SelectComponent
+            name="mode"
+            placeholder="type the course"
+            selectOptionsData={SelectBoxOptions}
+          />
+          <InputFormFeild label="zoom link" name="zoomLink" />
           <InputFormFeild label="zoom link" name="zoomLink" />
           <SelectComponent
-              name="private/public"
-              placeholder="type the course"
-              selectOptionsData={SelectBoxOptions}
-            />
-            <SelectComponent
-              name="private/public"
-              placeholder="type the course"
-              selectOptionsData={SelectBoxOptions}
-            />
+            name="private/public"
+            placeholder="type the course"
+            selectOptionsData={SelectBoxOptions}
+          />
+          <SelectComponent
+            name="private/public"
+            placeholder="type the course"
+            selectOptionsData={SelectBoxOptions}
+          />
           <UiButton text="NEXT" type="submit" />
         </div>
       </Form>
