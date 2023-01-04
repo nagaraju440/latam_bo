@@ -2,18 +2,19 @@
   font-family: 'Open Sans';
 } */
 .scrollbar::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 .scrollbar::-webkit-scrollbar-track {
-  border-radius: 100vh;
-  /* background: #f7f4ed; */
+  border-radius: 10px;
+  background-color: #F8F8F8;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
   background: #D7D7D7;
-  border-radius: 100vh;
-  border: 0px solid #f6f7ed;
+  border-radius: 10px;
+  border: 0px;
+  max-height: 11px;
 }
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
