@@ -24,7 +24,11 @@ const NewCoursePage4 = () => {
       </Accordion>
 
       <Accordion name="Gastos" id="gasto">
-        <div>bhuvanesh</div>
+        <Form onSubmit={() => {}}>
+          <div>a</div>
+          <NormalInputFormField name="1" />
+          <div>b</div>
+        </Form>
       </Accordion>
 
       {/* <Accordion>
