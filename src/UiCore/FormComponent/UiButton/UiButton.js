@@ -3,11 +3,10 @@ import Button from '@mui/material/Button'
 import { any } from 'prop-types'
 import React from 'react'
 const UiButton = (props) => {
-
   return (
     // <Button variant="contained" {...props}>
     <button
-      className=" bg-[#7677F4]  w-[367px] h-[55px] rounded text-white border"
+      className={`bg-[#7677F4] w-[${props.width}]  h-[55px] rounded text-white border`}
       {...props}
     >
       {props.text}

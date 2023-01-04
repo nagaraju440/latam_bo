@@ -48,7 +48,7 @@ const NewCoursePage2 = () => {
             placeholder="type the course"
             selectOptionsData={SelectBoxOptions}
           />
-          <UiButton text="NEXT"  type="submit" />
+          <UiButton text="NEXT"  type="submit" width={"100px"}/>
         </div>
       </Form>
     </div>
