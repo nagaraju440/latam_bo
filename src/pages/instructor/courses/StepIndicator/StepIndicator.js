@@ -20,7 +20,7 @@ const Stepper = (props) => {
             } `}
           >
             <div className="step">
-              {i + 1 < currentStep || complete ? <div>hii</div> : i + 1}
+              {i + 1 < currentStep || complete ? <div className="complete p">{i+1}</div> : i + 1}
             </div>
           </div>
         ))}
