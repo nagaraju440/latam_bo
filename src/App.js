@@ -1,12 +1,11 @@
-import "./App.css";
-import Table24 from "./Components/Table";
-import Data from "./Components/Data";
-import { useState, useEffect } from "react";
-import Page from "./Components/Page";
-import Content from "./Components/Content";
+import Instructor from "./pages/Instructor/Index";
 
 function App() {
-  return <Content />;
+  return (
+    <div>
+      <Instructor />
+    </div>
+  );
 }
 
 export default App;

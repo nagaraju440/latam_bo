@@ -4,7 +4,7 @@ import Editon  from './Icon/Editon.js';
 import Editof from './Icon/Editof.js';
 import Coldata from './Coldata.json';
 
-function Table24(prob) {
+function Table(prob) {
   const [a,setA]=useState([]);
   const dup=prob.data;
   var D=JSON.stringify(dup);
@@ -18,7 +18,7 @@ function Table24(prob) {
         {Coldata.map((l) => {
           
           return (
-            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm">
+            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm ">
              <ParentboxComp a={a} seta={setA}  t={t} len={prob.le} firstid={prob.first}/>
               <div className="">{l.id}</div>
               <div className="">{l.status}</div>
@@ -33,10 +33,10 @@ function Table24(prob) {
         {prob.data.map((l) => {
             
           var tid=parseInt(l.id.substring(3,7));
-            console.log(tid);
+            // console.log(tid);
           return (
             
-            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm">
+            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm ">
               <CheckboxComp id={tid} a={a} setA={setA}/>
               <div className="underline decoration-1">{l.id}</div>
               <div
@@ -64,7 +64,7 @@ function Table24(prob) {
   );
 }
 
-export default Table24;
+export default Table;
 
 const EditComponent = () => {
   const [ch, setch] = useState("Editof");
@@ -77,11 +77,11 @@ const EditComponent = () => {
   );
 };
 const CheckboxComp=({id,a,setA})=>{
-    console.log("hello",a.includes(id),a,id)
-  const [checked, setChecked] = useState(false);
+    // console.log("hello",a.includes(id),a,id)
+  const [, setChecked] = useState(false);
   const handleChange = () => {
     setChecked(prevState => !prevState);
-    console.log(id,a,setA)
+    // console.log(id,a,setA)
     
     if(a.includes(id))
     {
