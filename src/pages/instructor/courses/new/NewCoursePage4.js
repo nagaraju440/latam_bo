@@ -3,7 +3,7 @@ import InputFormFeild from "../../../../UiCore/FormComponent/InputFormFeild/Inpu
 import UiButton from "../../../../UiCore/FormComponent/UiButton/UiButton";
 import * as yup from "yup";
 import Accordion from "../../../../components/Accordion";
-import NormalInputFormField from "../../../../UiCore/FormComponent/InputFormField/NormalInputField";
+import NormalInputFormField from "../../../../UiCore/FormComponent/NormalInputFeild/NormalInputField";
 const schema = yup.object().shape({
   name: yup.string().required(),
   mode: yup.string().required(),
@@ -42,9 +42,12 @@ const NewCoursePage4 = () => {
 
         </Form>
       </Accordion>
-
       <Accordion name="Gastos" id="gasto">
-        <div>bhuvanesh</div>
+        <Form onSubmit={() => {}}>
+          <div>a</div>
+          <NormalInputFormField name="1" />
+          <div>b</div>
+        </Form>
       </Accordion>
 
       {/* <Accordion>

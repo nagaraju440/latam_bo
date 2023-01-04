@@ -4,7 +4,7 @@ import NewCoursePage2 from "./NewCoursePage2";
 import NewCoursePage3 from "./NewCoursePage3";
 import NewCoursePage4 from "./NewCoursePage4";
 import NewCoursePage5 from "./NewCoursePage5";
-import NewInputField from "../../../../UiCore/FormComponent/InputFormField/NormalInputField";
+import NewInputField from "../../../../UiCore/FormComponent/NormalInputFeild/NormalInputField";
 
 const NewCourse = () => {
   return (

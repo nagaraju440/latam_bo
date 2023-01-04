@@ -9,7 +9,7 @@ const InputFormFeild = (props) => {
   
   } = useController({ name: props.name });
   return (
-    <div className="relative w-[400px]">
+    <div className="relative w-[400px]  ">
       <input
         type="text"
         class={`form-control
@@ -21,12 +21,12 @@ const InputFormFeild = (props) => {
         font-normal
         text-gray-700
         bg-white bg-clip-padding
-        border-[1.8px] border-solid border-gray-300 
+        border-[1px] border-solid border-gray-300 
         rounded
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none rounded-[8px]
         ${error && "border-red-600"}
         ${value && error == undefined && "border-green-600"}
        `}
@@ -45,7 +45,7 @@ const InputFormFeild = (props) => {
           class={`absolute right-[40px] bottom-[13.5px] w-7 cursor-pointer
           ${value && "text-green-600"}
           ${!isTouched && "text-blue-600"}
-          ${!isTouched&&value&&"text-blue-600"}
+          ${!isTouched && value && "text-blue-600"}
 
         `}
         />
