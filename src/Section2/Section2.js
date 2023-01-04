@@ -2,7 +2,7 @@ import React from 'react'
 import CalenderIcon from '../assets/Icons/CalenderIcon.png';
 import Dropdownicon from '../assets/Icons/DropdownIcon.png';
 import ButtonGroup from "../Section2/Gropubutton/Groupbutton";
-
+import EstatusComponent from '../EstatusComponent/EstatusComponent';
 function Section2() {
     const printButtonLabel = (event) => {
         console.log(event.target.name);
@@ -11,7 +11,7 @@ function Section2() {
     return (
         <div className="flex bg-[#E5E5E5] justify-center items-center pt-9 pb-5">
             <div className="flex justify-between w-11/12">
-                <div className="flex justify-between basis-7/12">
+                <div className="flex justify-between basis-8/12">
                     <div className="flex px-1 rounded-[5px] bg-[#ffffff]">
                         <ButtonGroup
                             buttons={["En línea", "Presencial"]}
@@ -28,12 +28,7 @@ function Section2() {
                         </div>
                     </div>
                     <div className='flex'>
-                        <div className='flex justify-between bg-[#ffffff] rounded-[5px] px-3 py-3 items-center text-center'>
-                            <div className='text-sm font-normal text-[#898989]'>Estatus</div>
-                            <div className='pl-20'>
-                                <img src={Dropdownicon}></img>
-                            </div>
-                        </div>
+                         <EstatusComponent></EstatusComponent>
                     </div>
                 </div>
                 <div className="flex justify-center items-center">
