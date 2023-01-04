@@ -7,7 +7,7 @@ const UiButton = (props) => {
   return (
     // <Button variant="contained" {...props}>
     <button
-      className=" bg-[#7677F4]  w-[367px] h-[55px] rounded text-white border"
+      className=  { `${props. color} ${props. widthStyle} h-[55px] rounded text-white border`}
       {...props}
     >
       {props.text}
