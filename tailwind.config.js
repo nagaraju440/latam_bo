@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        btn_bg: "#7677F4",
+      },
     },
   },
   plugins: [require("tw-elements/dist/plugin")],
