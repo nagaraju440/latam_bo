@@ -3,11 +3,19 @@ import Button from '@mui/material/Button'
 import { any } from 'prop-types'
 import React from 'react'
 const UiButton = (props) => {
+
   return (
-    <Button variant="contained" {...props} >
-      {props.disabled && props.type == 'submit' ? <CircularProgress size={24} /> : props.text}
-    </Button>
-  )
+    // <Button variant="contained" {...props}>
+    <button
+      className=" bg-[#7677F4]  w-[367px] h-[55px] rounded text-white border"
+      {...props}
+    >
+      {props.text}
+    </button>
+
+    // {/* {props.disabled && props.type == 'submit' ? <CircularProgress size={24} /> : props.text} */}
+    // </Button>
+  );
 }
 export default UiButton
 

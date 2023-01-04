@@ -10,9 +10,9 @@ export default function Modal({ visible, onClose ,children }) {
   if (!visible) return null;
   return (
     <div className="fixed inset-0 bg-black bg-opacity-30 ">
-      <div className="card relative bg-white rounded-md w-[650px] mx-auto py-5 min-h-[330px] mt-12">
+      <div className="card relative bg-white rounded-md w-[650px] mx-auto py-5 min-h-[330px] max-h-[90vh] mt-12 overflow-y-auto">
         <div className="font-bold">
-          <button className="flex ml-auto p-2 top-1 right-1 absolute right-0" onClick={onClose}>
+          <button className="flex ml-auto p-2 top-1 right-1 absolute " onClick={onClose}>
           <NormalCloseSvg/>
           </button>
           <div className="px-12 ">
