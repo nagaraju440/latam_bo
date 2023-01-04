@@ -15,9 +15,10 @@ export default function Modal({ visible, onClose ,children }) {
           <button className="flex ml-auto p-2 top-1 right-1 absolute right-0" onClick={onClose}>
           <NormalCloseSvg/>
           </button>
-          <div className="px-12">
-          </div>
+          <div className="px-12 ">
+          
           {children}
+          </div>
         </div>
       </div>
     </div>
