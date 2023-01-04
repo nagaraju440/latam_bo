@@ -7,12 +7,10 @@ import Coldata from './Coldata.json';
 function Table24(prob) {
   const [a,setA]=useState([]);
   const dup=prob.data;
+  var len=dup.length;
   var D=JSON.stringify(dup);
   var t=parseInt(D.substring(7,10));
-  const [req,setreq]=useState(t);
-
    return (
-    
     <div className="bg-background font-normal  text-sm">
         
       <div className="flex flex-col gap-2 content-center justify-center  p-5 ">
@@ -20,7 +18,7 @@ function Table24(prob) {
           
           return (
             <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm">
-             <ParentboxComp a={a} seta={setA} length={prob.data.length} />
+             <ParentboxComp a={a} seta={setA} length={prob.data.length} t={t} lem={len}/>
               <div className="">{l.id}</div>
               <div className="">{l.status}</div>
               <div className="">{l.type}</div>
@@ -97,7 +95,7 @@ const CheckboxComp=({id,a,setA})=>{
     <input type="checkbox" className="w-5 h-5" onChange={handleChange} checked={a.includes(id)} ></input>
   )
 } 
-const ParentboxComp=({a,seta,length,ip,req})=>{
+const ParentboxComp=({a,seta,length,ip,t,len})=>{
   
   const handleChangeall=(e)=>{
     
@@ -105,11 +103,8 @@ const ParentboxComp=({a,seta,length,ip,req})=>{
     var tep=[]
     if (e.target.checked)
     {
-        console.log(req);
-      for (let i=req; i<req+10; i++)
+      for (let i=t; i<t+10; i++)
       {
-        console.log(i)
-        console.log(a)
         tep.push(i)
       } 
       console.log(tep)
