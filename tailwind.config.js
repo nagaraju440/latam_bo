@@ -14,10 +14,15 @@ module.exports = {
     },
     colors: {
       'background':'#E5E5E5',
-      'completed': '#44B741',
       'pending': '#FFC658',
       'white': '#FFFFFF',
       'black': '#000000',
+      'Revision': '#FFC658',
+      'Aprobacion': "#FFC658",
+      'Rendicion':"#FF5858",
+      'Promocion':'#44B741',
+      'Cursada ':'#44B741',
+      'Cierre':'#59595B',
       'red':'#ff0000',
       'listactive':'#59595B',
       'listunactive':'#9097A0'

@@ -12,14 +12,12 @@ function Content() {
   useEffect(() => {
     console.log("useeffect");
     Specific(1);
-  }, [count]);
+  }, []);
   const col = (count) => {
-    // console("count in col",count)
     var temp = [];
     Data.map((l) => {
       return (temp = [...temp, l]);
     });
-    console.log(temp);
     setl(temp.length);
    
     var dup = temp;
@@ -44,19 +42,16 @@ function Content() {
     
   };
   const Specific = (num) => {
-    console.log(num,"in specific function");
     if (num === 0) setcount(0);
     else 
     {
-      var x=(num-1)*10
+    var x=(num-1)*10
     setcount(x);
-    console.log(x,count)
-    console.log("count is",count)
     col(x);
     }
   };
   return (
-    <div className="min-h-screen bg-background flex flex-col justify-between">
+    <div className="min-h-screen bg-background flex flex-col justify-between gap-[50px]">
       <Table data={bigdata} le={le} first={first} calssName="min-h-full" />
       <Page
         className="position"
@@ -64,6 +59,7 @@ function Content() {
         Specific={Specific}
         prev={prev}
         next={next}
+        le={le}
       />
     </div>
   );

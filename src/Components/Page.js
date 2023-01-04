@@ -4,9 +4,25 @@ import Leftarrow from "./Icon/Leftarrow";
 import Rightarrow from "./Icon/Rightarrow";
 function Page(prob) {
   const [activenumber, setactivenumber] = useState(0);
-  const arr = [1, 2, 3, 4, 5, 6];
+  const arr = [];
+  const reqpages=[];
+  var lengthofdata=prob.le;
+  var noOfPages=parseInt(lengthofdata/10);
+  if(lengthofdata%10!=0)
+  noOfPages+=1;
+  for(let i=1;i<=noOfPages;i++)
+  {
+    var x="";
+    if(i<10)
+    {
+      x="0"+i.toString();
+      arr.push(x);
+    }
+  }
+  // console.log(arr);
+  // console.log(noOfPages)
   const handleClick = (l) => {
-    prob.Specific(l);
+    prob.Specific(parseInt(l));
     setactivenumber(l);
   };
   const righthandle = () => {
@@ -38,7 +54,7 @@ function Page(prob) {
                   : "text-listunactive cursor-pointer"
               }
             >
-              {l}
+              <div className="truncate ...">{l}</div>
             </li>
           );
         })}

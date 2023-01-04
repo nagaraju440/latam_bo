@@ -8,17 +8,15 @@ function Table(prob) {
   const [a,setA]=useState([]);
   const dup=prob.data;
   var D=JSON.stringify(dup);
-  console.log(prob.first);
   var t=parseInt(D.substring(10,14));
-  console.log(t)
    return (
     <div className="font-normal  text-sm">
         
-      <div className="flex flex-col gap-2 content-center justify-center  p-5 ">
+      <div className="flex flex-col gap-2 content-center justify-center ">
         {Coldata.map((l) => {
           
           return (
-            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm ">
+            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm text-[#898989]">
              <ParentboxComp a={a} seta={setA}  t={t} len={prob.le} firstid={prob.first}/>
               <div className="">{l.id}</div>
               <div className="">{l.status}</div>
@@ -33,17 +31,14 @@ function Table(prob) {
         {prob.data.map((l) => {
             
           var tid=parseInt(l.id.substring(3,7));
-            // console.log(tid);
           return (
             
-            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm ">
+            <div className="grid grid-cols-9 justify-content items-center  bg-white  rounded-lg p-5 font-normal text-sm h-[65px]">
               <CheckboxComp id={tid} a={a} setA={setA}/>
               <div className="underline decoration-1">{l.id}</div>
               <div
                 className={
-                  l.status === "Completed"
-                    ? " text-completed underline"
-                    : " text-pending underline"
+                  l.status === "Revisión"? " text-Revision underline":(l.status === "Promoción"? " text-Promocion underline":(l.status === "Cursada"? " text-Promocion underline":((l.status === "Promoción"? " text-Promocion underline""text-Cierre underline"))  
                 }
               >
                 {l.status}
@@ -53,7 +48,7 @@ function Table(prob) {
               <div className="">{l.type}</div>
               <div className="">{l.instrutor}</div>
               <div className="">{l.pid}</div>
-              <div className="flex justify-end items-end ">
+              <div className="flex items-end ">
                 <EditComponent />
               </div>
             </div>
@@ -73,7 +68,9 @@ const EditComponent = () => {
     else setch("Editof");
   };
   return (
+    <>
     <div onClick={change}>{ch === "Editon" ? <Editon /> : <Editof />}</div>
+  </>
   );
 };
 const CheckboxComp=({id,a,setA})=>{
@@ -103,7 +100,7 @@ const CheckboxComp=({id,a,setA})=>{
   )
 } 
 const ParentboxComp=({a,seta,t,len,firstid})=>{
-   console.log(a,'io',seta,'lo',t,'len is',len);
+  //  console.log(a,'io',seta,'lo',t,'len is',len);
   const handleChangeall=(e)=>{
     
     // console.log(e.target.checked,"ii");
@@ -118,7 +115,7 @@ const ParentboxComp=({a,seta,t,len,firstid})=>{
         // console.log(abcd);
         abcd.push(i)
       } 
-      console.log(abcd,"alll vslues")
+      // console.log(abcd,"alll vslues")
       seta(abcd)
     }
 

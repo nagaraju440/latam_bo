@@ -9,7 +9,7 @@ function Section2() {
         //do some stuff here
     };
     return (
-        <div className='bg-[#E5E5E5] justify-center items-center px-12 py-5   grid grid-cols-5 gap-3' >
+        <div className='bg-[#E5E5E5] justify-center items-center  py-5   grid grid-cols-5 gap-3' >
             <div>
                 <div className="rounded-[5px] bg-[#ffffff] w-48 ">
                     <ButtonGroup

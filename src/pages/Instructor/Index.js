@@ -17,11 +17,11 @@ export default function Index() {
         <div className="col-span-2">
           <Sidebar />{" "}
         </div>
-        <div className="bg-grey-200 col-span-8">
+        <div className=" col-span-8 px-9 border bg-[#E5E5E5]">
           <HeaderLayout />
           <Filter />
           <Table />
-          DATA TABLE HERE
+          {/* DATA TABLE HERE */}
           {/* <EditComponent/> */}
         </div>
       </div>
