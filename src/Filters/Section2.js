@@ -37,7 +37,7 @@ function Section2() {
 
             </div>
             <div className=' '>
-                <div className="justify-end items-ends text-end col-span-2">
+                <div className="justify-end items-ends text-end col-span-2 w-36 mx-8">
                     <div className='text-sm font-normal text-[#898989] underline'>Más opciones</div>
                 </div>
             </div>

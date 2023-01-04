@@ -14,18 +14,19 @@ function Table24(prob) {
    return (
     <div className="bg-background font-normal  text-sm  px-10">
         
-      <div className="flex flex-col gap-2 content-center justify-center  p-5  ">
+      <div className="flex flex-col gap-2 content-center justify-center p-5">
         {Coldata.map((l) => {
           
           return (
-            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm">
-             <ParentboxComp a={a} seta={setA}  t={t} len={prob.le} firstid={prob.first}/>
+            <div className="grid grid-cols-12 items-start  rounded-lg p-5 font-normal text-sm">
+              <div className="">
+             <ParentboxComp a={a} seta={setA}  t={t} len={prob.le} firstid={prob.first}/></div>
               <div className="">{l.id}</div>
               <div className="">{l.status}</div>
-              <div className="">{l.type}</div>
-              <div className="">{l.duration}</div>
+              <div className="col-span-2 ">{l.type}</div>
+              <div className="col-span-2">{l.duration}</div>
               <div className="">{l.format}</div>
-              <div className="">{l.instrutor}</div>
+              <div className="col-span-2">{l.instrutor}</div>
               <div className="">{l.pid}</div>
             </div>
           );
@@ -35,23 +36,23 @@ function Table24(prob) {
           var tid=parseInt(l.id.substring(3,7));
             // console.log(tid);
           return (
-            
-            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm ">
-              <CheckboxComp id={tid} a={a} setA={setA}/>
-              <div className="underline decoration-1">{l.id}</div>
+            <div className="grid grid-cols-12 bg-white  rounded-lg p-5 font-normal text-sm justify-center items-center">
+              <div className="col-span-0">
+              <CheckboxComp id={tid} a={a} setA={setA}/></div>
+              <div className="underline decoration-1 col-span-1">{l.id}</div>
               <div
                 className={
                   l.status === "Completed"
-                    ? " text-completed underline"
-                    : " text-pending underline"
+                    ? " text-completed underline col-span-1.5 "
+                    : " text-pending underline col-span-1.5"
                 }
               >
                 {l.status}
               </div>
-              <div className="">{l.format}</div>
-              <div className="">{l.days}</div>
+              <div className="col-span-2">{l.format}</div>
+              <div className="col-span-2">{l.days}</div>
               <div className="">{l.type}</div>
-              <div className="">{l.instrutor}</div>
+              <div className="col-span-2">{l.instrutor}</div>
               <div className="">{l.pid}</div>
               <div className="flex justify-end items-end ">
                 <EditComponent />
