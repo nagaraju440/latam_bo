@@ -3,7 +3,6 @@ import Form from "./UiCore/FormComponent/FormFeild/FormFeild";
 import InputFormFeild from "./UiCore/FormComponent/InputFormFeild/InputFormFeild";
 import NewCoursePage1 from "./pages/instructor/courses/new/NewCoursePage1";
 import StepIndicator from './pages/instructor/courses/StepIndicator/StepIndicator';
-import { NordicWalking } from "@mui/icons-material";
 import NormalCloseSvg from "./assets/icons/NormalCloseIcon";
 
 
