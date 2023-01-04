@@ -9,7 +9,7 @@ const InputFormFeild = (props) => {
   
   } = useController({ name: props.name });
   return (
-    <div className="relative w-[400px]">
+    <div className="relative w-[400px]  ">
       <input
         type="text"
         class={`form-control
@@ -45,7 +45,7 @@ const InputFormFeild = (props) => {
           class={`absolute right-[40px] bottom-[13.5px] w-7 cursor-pointer
           ${value && "text-green-600"}
           ${!isTouched && "text-blue-600"}
-          ${!isTouched&&value&&"text-blue-600"}
+          ${!isTouched && value && "text-blue-600"}
 
         `}
         />
