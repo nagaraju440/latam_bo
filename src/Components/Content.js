@@ -11,8 +11,8 @@ function Content() {
   const [first, setfirstid] = useState();
   useEffect(() => {
     console.log("useeffect");
-    // Specific(1);
-  }, [count]);
+    Specific(1);
+  }, []);
   const col = (count) => {
     // console("count in col",count)
     var temp = [];
