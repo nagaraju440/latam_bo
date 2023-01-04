@@ -5,7 +5,7 @@ import EditButton from "./EditButton";
 function Content() {
   return (
     <div className="mb-2 relative">
-      <div className="container h-96 overflow-y-scroll scrollbar pr-5">
+      <div className="container h-96  pr-5 overflow-y-scroll scrollbar">
         {Data.map((d) => {
           return (
             <div className="my-2">
