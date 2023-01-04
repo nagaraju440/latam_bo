@@ -85,7 +85,7 @@ export default function Sidebar() {
         // ></div>
         <div
             style={{ borderRight: "1px solid #d7d7d7" }}
-            className="w-1/5 h-full top-20 fixed flex flex-col bg-sidebar"
+            className="w-1/5 h-full top-20 fixed flex flex-col bg-[#F8F5EF]"
         >
             <div className="px-6 w-full h-[88px] border-b ">
                 <div className="w-full border rounded-lg mt-4 w-auto h-[51px] flex flex-row items-center gap-4 pl-6 pr-5  ">
