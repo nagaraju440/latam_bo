@@ -9,16 +9,16 @@ function Section2() {
         //do some stuff here
     };
     return (
-        <div className='bg-[#E5E5E5] justify-center items-center px-12 py-5   grid grid-cols-6 gap-3 bg-[red]' >
+        <div className='bg-[#E5E5E5] justify-center items-center px-12 py-5  grid grid-cols-6 gap-3' >
             <div>
-                <div className="rounded-[5px] bg-[#ffffff] w-48">
+                <div className="rounded-[5px] bg-[#ffffff] w-48 mx-2">
                     <ButtonGroup
                         buttons={["En línea", "Presencial"]}
                         doSomethingAfterClick={printButtonLabel}
                     />
                 </div>
             </div>
-            <div className='flex px-3 py-3.5 rounded-[5px] bg-[#ffffff] justify-between items-center text-center w-48'>
+            <div className='flex px-3 py-3.5 rounded-[5px] bg-[#ffffff] justify-between items-center text-center w-48 mx-2'>
                 <div>
                     <img src={CalenderIcon}></img>
                 </div>
@@ -27,7 +27,7 @@ function Section2() {
                     <img src={Dropdownicon}></img>
                 </div>
             </div>
-            <div>
+            <div className="mx-2">
                 <EstatusComponent></EstatusComponent>
             </div>
             <div>
