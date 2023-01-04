@@ -16,7 +16,7 @@ const [open, setOpen] = useState(false);
 
   }
   return (
-    <div id="select" className="w-[367px]   font-medium  relative ">
+    <div id="select" className="w-[121px]   font-medium  relative ">
       <div
         onClick={handleSelectToggle}
         className={`bg-white w-full p-2 flex items-center h-[55px] justify-between border rounded-[8px] ${
