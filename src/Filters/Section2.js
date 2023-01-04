@@ -9,9 +9,9 @@ function Section2() {
         //do some stuff here
     };
     return (
-        <div className='bg-[#E5E5E5] justify-center items-center px-12 py-5   grid grid-cols-5 gap-3' >
+        <div className='bg-[#E5E5E5] justify-center items-center px-12 py-5   grid grid-cols-6 gap-3 mx-2' >
             <div>
-                <div className="rounded-[5px] bg-[#ffffff] w-48 ">
+                <div className="rounded-[5px] bg-[#ffffff] w-48">
                     <ButtonGroup
                         buttons={["En línea", "Presencial"]}
                         doSomethingAfterClick={printButtonLabel}
@@ -27,16 +27,17 @@ function Section2() {
                     <img src={Dropdownicon}></img>
                 </div>
             </div>
-
-            <div >
+            <div>
                 <EstatusComponent></EstatusComponent>
             </div>
             <div>
 
             </div>
+            <div>
 
+            </div>
             <div className=' '>
-                <div className=" justify-center items-center col-span-2 pl-6">
+                <div className="justify-end items-ends text-end col-span-2">
                     <div className='text-sm font-normal text-[#898989] underline'>Más opciones</div>
                 </div>
             </div>
