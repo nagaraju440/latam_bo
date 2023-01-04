@@ -8,9 +8,9 @@ module.exports = {
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
-      colors: {
-        'h-color': '#59595b',
-      },
+      backgroundImage:{
+        'dashboard-card-image':"url('/src/assests/girl_namaste_phose.png')"
+      }
     },
   },
   plugins: [],

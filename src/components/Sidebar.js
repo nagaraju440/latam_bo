@@ -85,16 +85,16 @@ export default function Sidebar() {
         // ></div>
         <div
             style={{ borderRight: "1px solid #d7d7d7" }}
-            className="h-full fixed flex flex-col bg-sidebar"
+            className="w-1/5 h-full top-20 fixed flex flex-col bg-[#F8F5EF]"
         >
             <div className="px-6 w-full h-[88px] border-b ">
-                <div className=" border rounded-lg mt-4 w-auto h-[51px] flex flex-row items-center gap-2 pl-6 pr-5  ">
+                <div className="w-full border rounded-lg mt-4 w-auto h-[51px] flex flex-row items-center gap-4 pl-6 pr-5  ">
                     <img
                         src={Instructor_icon}
                         alt="i am instructor icon"
                         className="w-6"
                     />
-                    <p className="text-[16px] text-[#7677F4] font-[600] ">
+                    <p className="text-[16px #7677F4] font-[600] ">
                         INSTRUCTOR
                     </p>
                     <img
@@ -107,14 +107,13 @@ export default function Sidebar() {
             <div className="h-full px-6 py-4 overflow-y-scroll scrollbar">
                 {sideNavItems.map((items, key) => {
                     return (
-                        // <div className="h[51px] pl-6 pr-5 py-4 flex flex-row items-center gap-4 border">
-                        <div className="w-full border rounded-lg mt-4 w-auto h-[51px] flex flex-row items-center gap-2 pl-6 pr-5  ">
+                        <div className="h[51px] pl-6 pr-5 py-4 flex flex-row items-center gap-4">
                             <img
                                 src={items.icon}
                                 alt="I am activitios icon in side bar"
                                 className="w-7"
                             />
-                            <p className="text-[16px] text-[#59595B] font-[600] mr-2">{items.text}</p>
+                            <p className="text-[16px #7677F4] font-[600] ">{items.text}</p>
                             <img
                                 src={Down_Arrow}
                                 alt="i am down arrow in side bar"
