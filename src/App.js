@@ -8,9 +8,11 @@ import { Dashbaord } from "./pages/Dashbaord";
 function App() {
   return (
     <div>
+      <Navbar/>
+      <Sidebar/>
       {/* <div  className='text-xl bg-green-500' >hello tailwind text</div> */}
-      <Notification />
-      <Cards />
+      {/* <Notification /> */}
+      {/* <Cards /> */}
     </div>
   );
 }

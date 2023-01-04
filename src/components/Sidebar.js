@@ -1,52 +1,16 @@
 import React from "react";
-import Instructor_icon from "../../assets/icons/Instructor_icon.svg";
-import Activities_icon from "../../assets/icons/activities_icon.svg";
-import Allumnos_icon from "../../assets/icons/Allumni.svg";
-import Star_icon from "../../assets/icons/search_icon.svg";
-import Blog_icon from "../../assets/icons/bell_icon.svg";
-import Reports_icon from "../../assets/icons/reports_icon.svg";
-import Legal_icon from "../../assets/icons/legals_icon.svg";
-import Administrator_icon from "../../assets/icons/hand_icon.svg";
-import Config_icon from "../../assets/icons/Configuration_icon.svg";
-import Down_Arrow from "../../assets/icons/down_arrow_icon.svg";
+import Activities_icon from '../assests/activities_icon.svg'
+import Instructor_icon from "../assests/Instructor_icon.svg";
+import Allumnos_icon from "../assests/Allumni.svg";
+import Star_icon from "../assests/search_icon.svg";
+import Blog_icon from "../assests/blog_icon.svg";
+import Reports_icon from "../assests/reports_icon.svg";
+import Legal_icon from "../assests/legals_icon.svg";
+import Administrator_icon from "../assests/profile_icon.png";
+import Config_icon from "../assests/Configuration_icon.svg";
+import Down_Arrow from "../assests/down_arrow_icon.svg";
 
 export default function Sidebar() {
-    const templ = `
-        <div className="border px-2 py-4">
-            <div className="border flex justify-between px-2 py-3 ">
-                <div className="flex gap-x-4">
-                    <img src={Instructor_icon} alt="i am instructor icon" />
-                    <p>INSTRUCTOR</p>
-                </div>
-                <img src={Down_Arrow} alt="i am drop down arrow " />
-            </div>
-        </div>
-        <div>
-            {sideNavItems.map((items, key) => {
-                return (
-                    <div className=" px-4 py-2">
-                        <div className="flex justify-between">
-                            <div className="flex gap-2">
-                                <div className="w-8">
-                                <img
-                                    src={items.icon}
-                                    alt="I am activitios icon in side bar"
-                                    
-                                />
-                                </div>
-                                <p className="text-sm">{items.text}</p>
-                            </div>
-                            <img
-                                src={Down_Arrow}
-                                alt="i am down arrow in side bar"
-                                className=""
-                            />
-                        </div>
-                    </div>
-                );
-            })}
-        </div>
-    `;
 
     const sideNavItems = [
         {
