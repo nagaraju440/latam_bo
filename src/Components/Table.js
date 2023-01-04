@@ -12,13 +12,13 @@ function Table24(prob) {
   var t=parseInt(D.substring(10,14));
   console.log(t)
    return (
-    <div className="bg-background font-normal  text-sm">
+    <div className="font-normal  text-sm">
         
       <div className="flex flex-col gap-2 content-center justify-center  p-5 ">
         {Coldata.map((l) => {
           
           return (
-            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm w-[1045px] h-[13px]">
+            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm">
              <ParentboxComp a={a} seta={setA}  t={t} len={prob.le} firstid={prob.first}/>
               <div className="">{l.id}</div>
               <div className="">{l.status}</div>
@@ -36,7 +36,7 @@ function Table24(prob) {
             console.log(tid);
           return (
             
-            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm w-[1045px] h-[65px]">
+            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm">
               <CheckboxComp id={tid} a={a} setA={setA}/>
               <div className="underline decoration-1">{l.id}</div>
               <div
@@ -78,7 +78,7 @@ const EditComponent = () => {
 };
 const CheckboxComp=({id,a,setA})=>{
     console.log("hello",a.includes(id),a,id)
-  const [, setChecked] = useState(false);
+  const [checked, setChecked] = useState(false);
   const handleChange = () => {
     setChecked(prevState => !prevState);
     console.log(id,a,setA)
@@ -113,7 +113,7 @@ const ParentboxComp=({a,seta,t,len,firstid})=>{
     if (e.target.checked)
     {
         // console.log(len);
-      for (let i=firstid; i<len; i++)
+      for (let i=firstid; i<=len; i++)
       {
         // console.log(abcd);
         abcd.push(i)

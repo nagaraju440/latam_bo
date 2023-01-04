@@ -7,6 +7,7 @@ import Table24 from "./Table";
 function Content() {
   useEffect(() => {
     Specific(1);
+    console.log("one")
   }, []);
   const [le, setl] = useState();
   const [bigdata, setbigdata] = useState([]);
@@ -34,13 +35,14 @@ function Content() {
     col();
   };
   const Specific = (num) => {
+    console.log(num)
     if (num === 0) setcount(0);
     else setcount((num - 1) * 10);
     col();
   };
   return (
-    <div className="h-full">
-      <Table24 data={bigdata} le={le} first={first} calssName="min-h-full" />
+    <div className="min-h-screen bg-background flex flex-col justify-between">
+      <Table24 data={bigdata} le={le} first={first}/>
       <Page
         className="position"
         col={col}

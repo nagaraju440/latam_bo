@@ -20,7 +20,7 @@ function Page(prob) {
   };
 
   return (
-    <div className="flex justify-center gap-5 bg-background ">
+    <div className="flex justify-center gap-5 ">
       <ul className="flex flex-row gap-4 w-[188px] h-[34px]  text-[14px] cursor-pointer font-normal">
         <li onClick={lefthandle} className="text-listunactive">
           <Leftarrow />
