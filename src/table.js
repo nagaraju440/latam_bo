@@ -4,68 +4,121 @@ import {useState} from 'react';
 import Editon  from './editon.js';
 import Editof from './editof.js';
 import Data1 from './data1.json';
-function Table() {
-  const [ch,setch]=useState("Editof");
+
+function Table(prob) {
   const [checked, setChecked] = useState(false);
-  const [schecked, ssetChecked] = useState(false);
-  const change= ()=>{
-      if (ch==="Editof")
-        setch("Editon");
-      else
-        setch("Editof");
-  }
-  const handleChange = () => {
-      setChecked(prevState => !prevState);
-    };
-    const ki=()=>{
-        ssetChecked(true);
-    }
-  return (
-    <div className="grid grid-cols-1 content-center bg-background font-sans font-normal text-sm">
-            <div className="flex flex-row justify-around mt-3 mx-3 items-center rounded-md font-normal text-sm">
-                {
-                    Data1.map((k,i)=>{
-                        return (
-                    <div>
-
-                            
-                <div><input type="checkbox" className="w-[20px] h-[20px]" onChange={handleChange} checked={checked}></input></div>
-                <div className="flex 1">{k.id}</div>
-                <div className="flex 1">{k.status}</div>
-                <div className="flex 2">{k.format}</div>
-                <div className="flex 1">{k.days}</div>
-                <div className="flex 2">{k.type}</div>
-                <div className="flex 1">{k.instrutor}</div>
-                <div className="flex 2">{k.pid}</div>
-                <div className="flex 1">Icon</div>
-                </div>
-                        )
-                    })
-                }
+  const [a,setA]=useState([]);
+   return (
+    
+    <div className="bg-background font-normal  text-sm">
+      <div className="flex flex-col gap-2 content-center justify-center  p-5 ">
+        {Data1.map((l) => {
+          
+          return (
+            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm">
+             <ParentboxComp a={a} seta={setA} length={Data.length}  />
+              <div className="">{l.id}</div>
+              <div className="">{l.status}</div>
+              <div className="">{l.type}</div>
+              <div className="">{l.duration}</div>
+              <div className="">{l.format}</div>
+              <div className="">{l.instrutor}</div>
+              <div className="">{l.pid}</div>
             </div>
-            {Data.map((l,i)=>{
-                return (
-                <div className="bg-white flex flex-row justify-around py-2 mb-3 mx-3 items-center rounded-md font-normal text-sm">
-                    <div><input type="checkbox" className="w-5 h-5" checked={checked} onChange={ki}></input></div>
-                    <div className="flex-1">{l.id}</div>
-                    <div className={l.status === 'Completed'?"flex-1 text-completed":'flex-1 text-pending'}>{l.status}</div>
-                    <div className="flex-1 ">{l.format}</div>
-                    <div className="flex-1">{l.days}</div>
-                    <div className="flex-1">{l.type}</div>
-                    <div className="flex-1">{l.instrutor}</div>
-                    <div className="flex-2">{l.pid}</div>
-                    <div onClick={change} className="flex 1">
-                      {
-                        (ch==="Editon")?<Editon />:<Editof />
-                      }
-                    </div>
-                </div>
-                )
-            })}
-        </div>
-        
-
-  )
+          );
+        })}
+        {Data.map((l) => {
+         
+          return (
+            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm">
+              <CheckboxComp id={l.id} a={a} setA={setA} />
+              <div className="">{l.id}</div>
+              <div
+                className={
+                  l.status === "Completed"
+                    ? "basis-1/8 text-completed underline"
+                    : "basis-1/8 text-pending underline"
+                }
+              >
+                {l.status}
+              </div>
+              <div className="">{l.format}</div>
+              <div className="">{l.days}</div>
+              <div className="">{l.type}</div>
+              <div className="">{l.instrutor}</div>
+              <div className="">{l.pid}</div>
+              <div className="flex justify-end items-end ">
+                <EditComponent />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
-export default Table
+export default Table;
+
+const EditComponent = () => {
+  const [ch, setch] = useState("Editof");
+  const change = () => {
+    if (ch === "Editof") setch("Editon");
+    else setch("Editof");
+  };
+  return (
+    <div onClick={change}>{ch === "Editon" ? <Editon /> : <Editof />}</div>
+  );
+};
+const CheckboxComp=({id,a,setA})=>{
+  const [checked, setChecked] = useState(false);
+  const handleChange = () => {
+    setChecked(prevState => !prevState);
+    console.log(id,a,setA)
+    if(a.includes(id))
+    {
+      var index = a.indexOf(id);
+      a.splice(index, 1);
+      console.log(a)
+      setA(a)
+    }
+    else{
+      console.log("lo")
+      setA(a.concat(id))
+    } 
+    console.log(a.length)
+  }; 
+ 
+
+  return(
+    <input type="checkbox" className="w-5 h-5" onChange={handleChange} checked={a.includes(id)} ></input>
+  )
+} 
+const ParentboxComp=({a,seta,length})=>{
+  
+  const handleChangeall=(e)=>{
+    
+    console.log(e.target.value,"ii");
+    var tep=[]
+    console.log(length)
+    if (e.target.checked)
+    {
+      for (let i=1; i<=length; i++)
+      {
+        console.log(i)
+        console.log(a)
+        tep.push(i)
+      } 
+      console.log(tep)
+      seta(tep)
+    }
+    else
+    {
+     seta([])
+    }
+  }
+
+  return(
+    <input type="checkbox" className="w-5 h-5" onChange={handleChangeall} ></input>
+  )
+}
