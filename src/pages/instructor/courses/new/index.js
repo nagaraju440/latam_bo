@@ -4,19 +4,18 @@ import NewCoursePage2 from "./NewCoursePage2";
 import NewCoursePage3 from "./NewCoursePage3";
 import NewCoursePage4 from "./NewCoursePage4";
 import NewCoursePage5 from "./NewCoursePage5";
+import NewInputField from "../../../../UiCore/FormComponent/NormalInputFeild/NormalInputField";
 
-
-const NewCourse=()=>{
-    return(
-        <div>
-            {/* <NewCoursePage1/> */}
-            <Stepper  stepsData={stepsData} />
-        </div>
-    )
-}
+const NewCourse = () => {
+  return (
+    <div>
+      {/* <NewCoursePage1/> */}
+      <Stepper stepsData={stepsData} />
+    </div>
+  );
+};
 
 export default NewCourse;
-
 
 const stepsData = [
   {
@@ -27,8 +26,7 @@ const stepsData = [
   {
     header: "NUEVO CURSO",
     descp: "Alcance",
-    stepComponent: <NewCoursePage2/>,
-    
+    stepComponent: <NewCoursePage2 />,
   },
   {
     header: "NUEVO CURSO",
@@ -45,5 +43,4 @@ const stepsData = [
     descp: "Nuevo Gasto",
     stepComponent: <NewCoursePage5 />,
   },
-
 ];

@@ -3,7 +3,7 @@ import React from 'react'
 export default function Accordion({children,name,id}) {
   return (
     <div class="accordion" id="accordionExample">
-    <div class="accordion-item bg-white border w-[350px] ">
+    <div class="accordion-item bg-white border w-[467px] ">
       <h2 class="accordion-header mb-0" id="headingOne">
         <button class="
           relative
@@ -12,7 +12,7 @@ export default function Accordion({children,name,id}) {
           w-full
           py-4
           px-5
-          text-base text-gray-800 text-left
+          text-base text-gray-500 text-left 
           bg-white
           border-0
           rounded-none
@@ -27,7 +27,7 @@ export default function Accordion({children,name,id}) {
     </div>
     <div id={id} class="accordion-collapse collapse show" aria-labelledby="headingOne"
         data-bs-parent="#accordionExample">
-        <div class="accordion-body py-4 px-5">
+        <div class="accordion-body py-4 px-5  ">
           {children}
         </div>
       </div>

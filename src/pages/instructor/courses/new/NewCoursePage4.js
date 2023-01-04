@@ -3,6 +3,7 @@ import InputFormFeild from "../../../../UiCore/FormComponent/InputFormFeild/Inpu
 import UiButton from "../../../../UiCore/FormComponent/UiButton/UiButton";
 import * as yup from "yup";
 import Accordion from "../../../../components/Accordion";
+import NormalInputFormField from "../../../../UiCore/FormComponent/NormalInputFeild/NormalInputField";
 const schema = yup.object().shape({
   name: yup.string().required(),
   mode: yup.string().required(),
@@ -15,23 +16,44 @@ const NewCoursePage4 = () => {
     console.log("data is", data);
   };
   return (
-   <div>
-    <Accordion name="Participantes" id="pa" >
-        <div>hello bhuuuuuu</div>
-        <div>hello bhuuuuuu</div>
+    <div>
+      <Accordion name="Participantes" id="pa" >
+        <Form onSubmit={() => {}}>
+          <div className="grid grid-cols-2 gap-5">
+            
+          <div  className="text-base text-gray-500 text-left " >Participantes totales</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div className="text-base text-gray-500 text-left ">Cuanta genta del taller</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div className="text-base text-gray-500 text-left ">Regular full</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div className="text-base text-gray-500 text-left ">Regular de tallers</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div className="text-base text-gray-500 text-left">Repitents</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div className="text-base text-gray-500 text-left">Referidos memberesia</div>
+          <div><NormalInputFormField name="1" /></div>
+          <div className="text-base text-gray-500 text-left">Repitents memberesia</div>
+          <div><NormalInputFormField name="1" /></div>
+          
+          </div>
+          
+          
 
-    </Accordion>
-    
+        </Form>
+      </Accordion>
+      <Accordion name="Gastos" id="gasto">
+        <Form onSubmit={() => {}}>
+          <div>a</div>
+          <NormalInputFormField name="1" />
+          <div>b</div>
+        </Form>
+      </Accordion>
 
-
-    <Accordion  name="Gastos" id="gasto" >
-        <div>bhuvanesh</div>
-    </Accordion>
-
-    {/* <Accordion>
+      {/* <Accordion>
         <div>hello bhuuuuuu</div>
     </Accordion> */}
-   </div>
+    </div>
   );
 };
 

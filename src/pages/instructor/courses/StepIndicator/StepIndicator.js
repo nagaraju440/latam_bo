@@ -25,7 +25,7 @@ const Stepper = (props) => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center">{props.stepsData[currentStep - 1].stepComponent}</div>
+      <div className="flex justify-center w-full m-auto">{props.stepsData[currentStep - 1].stepComponent}</div>
       {!complete && (
         <button
           className="btn bg-slate-300"
