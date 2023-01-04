@@ -58,7 +58,11 @@ const NewCoursePage3 = () => {
             placeholder="type the course"
             selectOptionsData={SelectBoxOptions}
           />
-          <UiButton text="NEXT" type="submit" />
+         
+         <div className="flex flex-row justify-around">
+          <UiButton text="PREVIOUS" widthStyle="w-[175px]" color="bg-[#D7D7D7]" type="submit" />
+          <UiButton text="NEXT" widthStyle="w-[175px]" color="bg-[#7677F4]"  type="submit" />
+          </div>
         </div>
       </Form>
     </div>
