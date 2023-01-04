@@ -1,38 +1,53 @@
-import React from 'react'
-import {useState} from 'react';
+import React from "react";
+import { useState } from "react";
+import Leftarrow from "./Icon/Leftarrow";
+import Rightarrow from "./Icon/Rightarrow";
 function Page(prob) {
-  const [state,setState]=useState(false);
-  const func=()=>{
-    // console.log("Karthik");
-    setState(true);
-  }
+  const [activenumber, setactivenumber] = useState(0);
+  const arr = [1, 2, 3, 4, 5, 6];
+  const handleClick = (l) => {
+    prob.Specific(l);
+    setactivenumber(l);
+  };
+  const righthandle = () => {
+    prob.next();
+    setactivenumber(activenumber + 1);
+  };
+
+  const lefthandle = () => {
+    prob.prev();
+    setactivenumber(activenumber - 1);
+  };
+
   return (
-    <div className="flex justify-center bg-background">
-  <nav aria-label="Page navigation example">
-    <ul class="flex list-style-none">
-      <li class="page-item"><a
-          class="page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 focus:shadow-none"
-          href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </a></li>
-      <li class="page-item"><a
-          class="page-link relative block py-1.5 px-3  border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
-          href="#">1</a></li>
-      <li class="page-item"><a
-          class="page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300  text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
-          onClick={func}>2</a></li>
-      <li class="page-item"><a
-          class="page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
-          href="#">3</a></li>
-      <li class="page-item"><a
-          class="page-link relative block py-1.5 px-3 rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
-          href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a></li>
-    </ul>
-  </nav>
-</div>
-  )
+    <div className="flex justify-center gap-5 bg-background ">
+      <ul className="flex flex-row gap-4 w-[188px] h-[34px]  text-[14px] cursor-pointer font-normal">
+        <li onClick={lefthandle} className="text-listunactive">
+          <Leftarrow />
+        </li>
+
+        {arr.map((l) => {
+          return (
+            <li
+              onClick={() => {
+                handleClick(l);
+              }}
+              className={
+                activenumber === l
+                  ? "text-listactive cursor-pointer"
+                  : "text-listunactive cursor-pointer"
+              }
+            >
+              {l}
+            </li>
+          );
+        })}
+        <li onClick={righthandle}>
+          <Rightarrow className="text-listactive cursor-pointer" />
+        </li>
+      </ul>
+    </div>
+  );
 }
 
-export default Page
+export default Page;

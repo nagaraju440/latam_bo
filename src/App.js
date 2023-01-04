@@ -1,34 +1,50 @@
 import "./App.css";
-import Table from "./Components/Table";
-import Table2 from "./Components/Table2";
+import Table24 from "./Components/Table24";
 import Data from "./Components/Data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Page from './Components/Page';
 
 function App() {
-  const [state,setState]=useState(false);
-  const func=()=>{
-    setState(true);
-  }
-  const [bigdata, setb] = useState([]);
-  const [da, setdata] = useState([]);
+
+  
+  useEffect(()=>{
+    Specific(1);
+  },[])
+  const [bigdata, setbigdata] = useState([]);
   const [count, setcount] = useState(0);
   const col = () => {
     var temp=[]
     Data.map((l)=>{
-      temp=[...temp,l]
+      return temp=[...temp,l]
     })
-    setdata(temp);
-    setb(da.slice(0,10));
-    console.log(bigdata);
-  };
   
+    setbigdata(temp.slice(count,count+10));
+  };
+  const next=()=>{
+    setcount(count+10);
+    col();
+  }
+  
+  
+  const prev=()=>{
+    if(count>0)
+    setcount(count-10);
+    else
+    setcount(0);
+    col();
+  }
+  const Specific=(num)=>{
+        if(num===0)
+        setcount(0);
+        else
+        setcount((num-1)*10);
+        col();
+  }
   
   return (
     <div>
-      <button onClick={col}>Click me</button>
-      <Table2 data={bigdata} />
-      <Page data={state}/>
+      <Table24 data={bigdata} />
+      <Page col={col} Specific={Specific} prev={prev} next={next}/>
     </div>
   );
 }

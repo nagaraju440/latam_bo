@@ -1,25 +1,17 @@
 import React from "react";
-import Data from "./Data.json";
 import Coldata from "./Coldata.json";
 import { useState } from "react";
-import Editon from "./Editon";
-import Editof from "./Editof";
+import Editon from "./Icon/Editon";
+import Editof from "./Icon/Editof";
 
 function Table2(prob) {
-  console.log(prob.data);
-  // console.log(typeof prob)
-  prob.data.map((l)=>{
-    console.log(l);
-  })
-  //h-[65px] w-[1045px]
-  
   return (
     
     <div className="bg-background font-normal  text-sm">
       <div className="flex flex-col gap-2 content-center justify-center  p-5 ">
         {Coldata.map((l) => {
           return (
-            <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm">
+            <div className="grid grid-cols-9  p-5 font-normal text-sm">
               <div>
                 <input type="checkbox" className="w-[20px] h-[20px]"></input>
               </div>
@@ -30,12 +22,13 @@ function Table2(prob) {
               <div className="">{l.format}</div>
               <div className="">{l.instrutor}</div>
               <div className="">{l.pid}</div>
+              <div></div>
             </div>
           );
         })}
         {prob.data.map((l) => {
           return (
-            <div className="grid grid-cols-9 items-start  bg-white  rounded-lg p-5 font-normal text-sm ">
+            <div className="grid grid-cols-9  bg-white  rounded-lg  font-normal text-sm p-5 h-[65px] ">
               <div>
                 <input type="checkbox" className="w-[20px] h-[20px]"></input>
               </div>
@@ -43,8 +36,8 @@ function Table2(prob) {
               <div
                 className={
                   l.status === "Completed"
-                    ? "basis-1/8 text-completed underline"
-                    : "basis-1/8 text-pending underline"    
+                    ? " text-completed underline"
+                    : " text-pending underline"    
                 }
               >
                 {l.status}
@@ -54,8 +47,8 @@ function Table2(prob) {
               <div className="">{l.type}</div>
               <div className="">{l.instrutor}</div>
               <div className="">{l.pid}</div>
-              <div className="flex justify-end items-end ">
-                <EditComponent />
+              <div className="flex justify-end">
+                <EditComponent/>
               </div>
             </div>
           );
