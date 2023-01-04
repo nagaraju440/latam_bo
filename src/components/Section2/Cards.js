@@ -15,7 +15,9 @@ function Cards() {
         { id: "6", src: v5, text: "Reporte nuevo" },
     ];
     return (
-            <div className="w-96 h-80  grid grid-cols-4 gap-4">
+        <div>
+            <p className="text-[21px] font-semibold text-[#59595B]">ENLACES RÁPIDOS</p>
+            <div className="w-96 h-80  grid grid-cols-4 gap-3">
                {Data.map((item) => {
                     return (
                         <div>
@@ -26,6 +28,7 @@ function Cards() {
                         </div>
                     );
                 })}
+            </div>
             </div>
     );
 }
