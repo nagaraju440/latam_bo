@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import ModalButton from './Components/ModalButton';
 import Resume from './Components/Resume/Resume';
 
