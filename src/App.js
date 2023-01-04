@@ -1,8 +1,4 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Cards from "./components/Section2/Cards";
-import Notification from "./components/Section2/Notifications";
-import Sidebar from "./components/Sidebar";
 import { Dashbaord } from "./pages/Dashbaord";
 import HeaderLayout from './HeaderLayout/HeaderLayout';
 import Section2 from './Filters/Section2';
@@ -14,6 +10,7 @@ import Page from './components/Page';
 import Instructor from './pages/Instructor/Index'
 
 function App() {
+<<<<<<< HEAD
 
   
   // useEffect(()=>{
@@ -63,5 +60,13 @@ function App() {
       </div>
   )
     }
+=======
+    return (
+        <div>
+            <Dashbaord /> 
+        </div>
+    );
+}
+>>>>>>> dashboard
 
 export default App
