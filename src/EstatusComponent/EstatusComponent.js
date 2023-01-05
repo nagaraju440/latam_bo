@@ -9,9 +9,9 @@ function classNames(...classes) {
 export default function EstatusComponent() {
   return (
     <div className="flex">
-    <Menu as="div" className="relative inline-block">
+    <Menu as="div" className="relative inline-block ">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white px-6 py-3.5 text-sm font-medium shadow-sm focus:outline-none focus:ring-2  focus:ring-offset-gray-100 text-[#898989]">
+        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white px-6 py-3.5 text-sm font-medium shadow-sm focus:outline-none focus:ring-2  focus:ring-offset-gray-100 text-[#898989] h-11">
           Estatus
           <img src={icon1}></img>
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-8" aria-hidden="true" />
@@ -26,7 +26,7 @@ export default function EstatusComponent() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute mt-2 w-54 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute mt-2 w-54  origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (

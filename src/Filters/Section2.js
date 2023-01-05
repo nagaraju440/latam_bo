@@ -9,16 +9,16 @@ function Section2() {
         //do some stuff here
     };
     return (
-        <div className='bg-[#E5E5E5] justify-center items-center px-12 py-5  grid grid-cols-6 gap-3' >
+        <div className='bg-[#E5E5E5] justify-center items-center px-14 py-5  grid grid-cols-6 gap-3' >
             <div>
-                <div className="rounded-[5px] bg-[#ffffff] w-48 mx-2">
+                <div className="flex rounded-[10px] bg-[#ffffff] w-48 h-11 justify-center items-center">
                     <ButtonGroup
                         buttons={["En línea", "Presencial"]}
                         doSomethingAfterClick={printButtonLabel}
                     />
                 </div>
             </div>
-            <div className='flex px-3 py-3.5 rounded-[5px] bg-[#ffffff] justify-between items-center text-center w-48 mx-2'>
+            <div className='flex px-3 py-3.5 rounded-[5px] bg-[#ffffff] justify-between items-center text-center w-48 h-11'>
                 <div>
                     <img src={CalenderIcon}></img>
                 </div>
@@ -27,7 +27,7 @@ function Section2() {
                     <img src={Dropdownicon}></img>
                 </div>
             </div>
-            <div className="mx-2">
+            <div className="">
                 <EstatusComponent></EstatusComponent>
             </div>
             <div>
@@ -36,8 +36,8 @@ function Section2() {
             <div>
 
             </div>
-            <div className=' '>
-                <div className="justify-end items-ends text-end col-span-2 w-36 mx-8">
+            <div className='flex justify-end items-ends text-end  '>
+                <div className="">
                     <div className='text-sm font-normal text-[#898989] underline'>Más opciones</div>
                 </div>
             </div>
