@@ -2,7 +2,7 @@ import React from 'react'
 import {useState} from 'react';
 import Editon  from './Icon/Editon.js';
 import Editof from './Icon/Editof.js';
-import { setPowerset } from 'mathjs';
+// import { setPowerset } from 'mathjs';
 // import Coldata from './Coldata.json';
 
 function Table(prob) {

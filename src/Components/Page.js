@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Leftarrow from "./Icon/Leftarrow";
 import Rightarrow from "./Icon/Rightarrow";
 function Page(prob) {
@@ -21,6 +21,8 @@ function Page(prob) {
   }
   // console.log(arr);
   // console.log(noOfPages)
+
+  
   const handleClick = (l) => {
     console.log("jii",l)
     prob.Specific(parseInt(l));
@@ -29,8 +31,9 @@ function Page(prob) {
     // console.log(activenumber);
   };
   const righthandle = () => {
-    prob.next();
     setactivenumber(parseInt(activenumber) + 1);
+    console.log(activenumber);
+    prob.next();
   };
 
   const lefthandle = () => {
