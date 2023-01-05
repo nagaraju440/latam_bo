@@ -87,6 +87,7 @@ const NewCoursePage4 = () => {
           </div>
         </Form>
       </Accordion>
+      <br/>
       <Accordion name="Gastos" id="gasto">
         <Form onSubmit={() => {}}>
         <div className="grid grid-cols-3 gap-3 text-gray-500">
@@ -108,7 +109,7 @@ const NewCoursePage4 = () => {
         </Form>
       </Accordion>
       <div className="flex flex-row justify-around p-2">
-        <UiButton
+        {/* <UiButton
           text="PREVIOUS"
           widthStyle="w-[222.55px]"
           color="bg-[#D7D7D7]"
@@ -119,12 +120,11 @@ const NewCoursePage4 = () => {
           widthStyle="w-[222.55px]"
           color="bg-[#7677F4]"
           type="submit"
-        />
+        /> */}
+        <UiButton text="PREVIOUS" widthStyle="w-[175px]" color="bg-[#D7D7D7]" type="submit" />
+          <UiButton text="NEXT" widthStyle="w-[175px]" color="bg-[#7677F4]"  type="submit" />
       </div>
 
-      {/* <Accordion>
-        <div>hello bhuuuuuu</div>
-    </Accordion> */}
     </div>
   );
 };

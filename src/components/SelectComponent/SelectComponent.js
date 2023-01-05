@@ -3,7 +3,7 @@ import { useController } from "react-hook-form";
 import CloseIconSvg from "../../assets/icons/closeIcon";
 import DropDownIcon from "../../assets/icons/DropDownIcon";
 
-const SelectComponent = ({name , selectOptionsData,placeholder}) => {
+const SelectComponent = ({name,selectOptionsData,placeholder}) => {
   const [inputValue, setInputValue] = useState("");
 //   const [value, setvalue] = useState("");
   const [open, setOpen] = useState(false);
@@ -46,11 +46,11 @@ const SelectComponent = ({name , selectOptionsData,placeholder}) => {
         )}
       </div>
       <ul
-        className={`bg-white mt-2  fixed   overflow-y-auto w-[220px]  ${
+        className={` bg-white mt-2 absolute right-0 overflow-y-auto w-[220px]  ${
           open ? "max-h-60" : "hidden"
         } border-[1px] shadow-xl p-3  z-50  rounded-[10px] `}
       >
-        <div className="flex items-center px-2 sticky top-0 bg-white   border-[1px] rounded-[8px] ">
+        <div className="flex items-center  px-2 sticky top-0 bg-white border-[1px] rounded-[8px] ">
           <input
             type="text"
             value={inputValue}
