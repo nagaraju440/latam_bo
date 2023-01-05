@@ -18,7 +18,7 @@ function Table24(prob) {
         {Coldata.map((l) => {
           
           return (
-            <div className="grid grid-cols-12 items-start  rounded-lg p-5 font-normal text-sm">
+            <div className="grid grid-cols-12 gap-2 items-start  rounded-lg p-5 font-normal text-sm">
               <div className="">
              <ParentboxComp a={a} seta={setA}  t={t} len={prob.le} firstid={prob.first}/></div>
               <div className="">{l.id}</div>
@@ -36,7 +36,7 @@ function Table24(prob) {
           var tid=parseInt(l.id.substring(3,7));
             // console.log(tid);
           return (
-            <div className="grid grid-cols-12 bg-white  rounded-lg p-5 font-normal text-sm justify-center items-center">
+            <div className="grid grid-cols-12 gap-2 bg-white  rounded-lg p-5 font-normal text-sm justify-center items-center">
               <div className="col-span-0">
               <CheckboxComp id={tid} a={a} setA={setA}/></div>
               <div className="underline decoration-1 col-span-1">{l.id}</div>
