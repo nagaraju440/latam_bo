@@ -18,7 +18,7 @@ function Section2() {
                     />
                 </div>
             </div>
-            <div className='flex px-3 py-3.5 rounded-[5px] bg-[#ffffff] justify-between items-center text-center w-48 h-11'>
+            <div className='flex px-3 py-3.5 rounded-[10px] bg-[#ffffff] justify-between items-center text-center w-48 h-11'>
                 <div>
                     <img src={CalenderIcon}></img>
                 </div>

@@ -9,9 +9,9 @@ function classNames(...classes) {
 export default function EstatusComponent() {
   return (
     <div className="flex">
-    <Menu as="div" className="relative inline-block ">
+    <Menu as="div" className="relative inline-block  ">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-white px-6 py-3.5 text-sm font-medium shadow-sm focus:outline-none focus:ring-2  focus:ring-offset-gray-100 text-[#898989] h-11">
+        <Menu.Button className="inline-flex w-full justify-center rounded-[10px] bg-white px-6 py-3.5 text-sm font-medium shadow-sm focus:outline-none focus:ring-2  focus:ring-offset-gray-100 text-[#898989] h-11">
           Estatus
           <img src={icon1}></img>
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-8" aria-hidden="true" />
