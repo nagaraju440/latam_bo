@@ -5,6 +5,7 @@ import StepIndicator from './pages/instructor/courses/StepIndicator/StepIndicato
 import { useState } from 'react';
 import NormalCloseSvg from "./assets/icons/NormalCloseIcon";
 import Select from "./select.js";
+import TimeDataRangePicker from './components/TimeDataRangPicker';
 
 function App() {
   const [showModal,setshowModal]=useState(false);
@@ -20,6 +21,7 @@ function App() {
         </div>
       </div> 
     <Modal onClose={handleOnClose} visible={showModal}><NewCourse/></Modal>
+    <TimeDataRangePicker/>
     {/* <Select/> */}
     {/* <Select></Select> */}
     </div>
