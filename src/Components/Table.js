@@ -2,22 +2,24 @@ import React from 'react'
 import {useState} from 'react';
 import Editon  from './Icon/Editon.js';
 import Editof from './Icon/Editof.js';
-import Coldata from './Coldata.json';
+import { setPowerset } from 'mathjs';
+// import Coldata from './Coldata.json';
 
 function Table(prob) {
   const [a,setA]=useState([]);
   const dup=prob.data;
   var D=JSON.stringify(dup);
   var t=parseInt(D.substring(10,14));
+  const [ch,setch]=useState(0);
    return (
     <div className="font-normal  text-sm">
         
       <div className="flex flex-col gap-2 content-center justify-center ">
-        {Coldata.map((l) => {
+        {prob.coldata.map((l) => {
           
           return (
             <div className="grid grid-cols-9 items-start  rounded-lg p-5 font-normal text-sm text-[#898989]">
-             <ParentboxComp a={a} seta={setA}  t={t} len={prob.le} firstid={prob.first}/>
+             <ParentboxComp a={a} seta={setA} ps={prob.ps} setps={prob.setps} t={t} len={prob.le} firstid={prob.first}/>
               <div className="">{l.id}</div>
               <div className="">{l.status}</div>
               <div className="">{l.type}</div>
@@ -75,7 +77,7 @@ const EditComponent = () => {
 };
 const CheckboxComp=({id,a,setA})=>{
     // console.log("hello",a.includes(id),a,id)
-  const [, setChecked] = useState(false);
+  const [checked, setChecked] = useState(false);
   const handleChange = () => {
     setChecked(prevState => !prevState);
     // console.log(id,a,setA)
@@ -99,33 +101,35 @@ const CheckboxComp=({id,a,setA})=>{
     <input type="checkbox" className="w-5 h-5" onChange={handleChange} checked={a.includes(id)} ></input>
   )
 } 
-const ParentboxComp=({a,seta,t,len,firstid})=>{
+const ParentboxComp=({a,seta,t,ps,setps,firstid})=>{
   //  console.log(a,'io',seta,'lo',t,'len is',len);
   const handleChangeall=(e)=>{
     
     // console.log(e.target.checked,"ii");
 
-    console.log('kiiiii')
+    // console.log('kiiiii')
     var abcd=[]
     if (e.target.checked)
     {
         // console.log(len);
-      for (let i=firstid; i<=len; i++)
+      for (let i=t; i<t+10; i++)
       {
         // console.log(abcd);
         abcd.push(i)
       } 
       // console.log(abcd,"alll vslues")
       seta(abcd)
+      setps(true);
     }
 
     else
     {
      seta([])
+
     }
   }
 
   return(
-    <input type="checkbox" className="w-5 h-5" onChange={handleChangeall} ></input>
+    <input type="checkbox" className="w-5 h-5" checked={ps} onChange={handleChangeall} ></input>
   )
 }

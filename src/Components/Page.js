@@ -22,8 +22,10 @@ function Page(prob) {
   // console.log(arr);
   // console.log(noOfPages)
   const handleClick = (l) => {
+    console.log("jii",l)
     prob.Specific(parseInt(l));
     setactivenumber(l);
+    // prob.setps(false);
     // console.log(activenumber);
   };
   const righthandle = () => {

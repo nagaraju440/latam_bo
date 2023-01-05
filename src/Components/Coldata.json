@@ -1,6 +1,6 @@
 [
     {
-        "id":"Id",
+        "id":"id",
         "status":"Estatus",
         "type":"Tipo",
         "duration":"Formato",
