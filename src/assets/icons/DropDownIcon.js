@@ -5,8 +5,8 @@ const DropDownIcon=({open})=>{
        fill="none"
        viewBox="0 0 24 24"
        strokeWidth={1.5}
-       stroke="currentColor"
-       className={` w-6 h-6 ${open && "rotate-180"} } `}
+       stroke="#898989"
+       className={` w-4 h-4 ${open && "rotate-180"} } `}
      >
        <path
          strokeLinecap="round"
