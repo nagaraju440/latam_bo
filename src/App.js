@@ -12,7 +12,7 @@ function App() {
   const handleOnClose=()=>setshowModal(false);
 
   return (
-    <div className={showModal?"inset-0 bg-black bg-opacity-30 h-full":""}>
+    <div className={showModal?"inset-0 bg-black bg-opacity-20 h-full":""}>
       <div className="maindiv">
         <div className="headerbutton p-3">
           <button 
