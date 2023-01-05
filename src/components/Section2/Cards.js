@@ -19,7 +19,7 @@ function Cards() {
     return (
         <div className="mt-9">
             <p className="text-[21px] font-semibold text-[#59595B]">ENLACES RÁPIDOS</p>
-            <div className="w-96 h-64  grid grid-cols-4 gap-3 ">
+            <div className="w-96 h-64  grid grid-cols-4 gap-3 mt-3 ">
                {Data.map((item) => {
                     return (
                         <div className=" h-20 w-20">

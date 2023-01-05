@@ -8,11 +8,11 @@ import Notificationcard from "./components/Section1/Carouselcards";
 function App() {
     return (
         <div>
-            {/* <Dashbaord /> */}
+            <Dashbaord />
             {/* <Searchcard/> */}
             {/* <Trail/> */}
             {/* <Notifications /> */}
-            <Cards />
+            {/* <Cards /> */}
             
         </div>
     );
