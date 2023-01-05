@@ -8,7 +8,7 @@ function searchcard() {
             <img className='rounded w-35 h-35' src={searchimage}></img>
         </div>
         <div className='flex flex-col  font-sans leading-4 text-[12px] font-normal '>
-            <p className=''>El Arte de Respirar · En línea</p>
+            <p>El Arte de Respirar · En línea</p>
             <p className=' text-[#898989]'>Del 14 al 18 de febrero, 2022</p>
         </div>
     </div>

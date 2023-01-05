@@ -1,14 +1,18 @@
 import "./App.css";
+import 'tw-elements';
 import { Dashbaord } from "./pages/Dashbaord";
-import Notifications from "./components/Section2/Notifications";
-import Searchcard from "./components/Section2/Searchcard";
+import Cards from "./components/Section2/Cards";
+import Notificationcard from "./components/Section1/Carouselcards";
+
 // import Introcard from "./components/Section2/Introcard";
 function App() {
     return (
         <div>
             {/* <Dashbaord /> */}
-            <Searchcard/>
-            {/* <Notifications/> */}
+            {/* <Searchcard/> */}
+            {/* <Trail/> */}
+            {/* <Notifications /> */}
+            <Cards />
             
         </div>
     );

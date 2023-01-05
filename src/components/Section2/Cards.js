@@ -19,11 +19,11 @@ function Cards() {
     return (
         <div className="mt-9">
             <p className="text-[21px] font-semibold text-[#59595B]">ENLACES RÁPIDOS</p>
-            <div className="w-96 h-80  grid grid-cols-4 gap-4">
+            <div className="w-96 h-64  grid grid-cols-4 gap-3 ">
                {Data.map((item) => {
                     return (
-                        <div className="mt-3">
-                            <div className=" border box-content h-20 w-20 flex justify-center shadow-md items-center rounded-[9px] bg-[#FFFFFF] ">
+                        <div className=" h-20 w-20">
+                            <div className=" border h-20 w-20 box-content flex justify-center shadow-md items-center rounded-[9px] bg-[#FFFFFF]">
                                 <img src={item.src}alt='this is card svg'></img>
                             </div>
                             <div className=" text-center text-[16px] font-normal mt-1.5 leading-none">{item.text}</div>
